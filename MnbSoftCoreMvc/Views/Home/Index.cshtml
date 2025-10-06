@@ -1,0 +1,1113 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MNBSOFT | Innovative Software Solutions for Your Business</title>
+    <!-- Stylesheets -->
+    <meta name="description" content="MNB Soft's customized software solutions. Our team of experts delivers innovative and efficient software to meet your specific needs. Contact us today." />
+    <meta name="keywords" content="Software development, Application development, Mobile app development, Software solutions, Digital transformation, Cloud computing" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MNBSOFT | Innovative Software Solutions for Your Business">
+    <meta property="og:url" content="https://mnbsoft.com/">
+    <meta property="og:image" content="https://mnbsoft.com/wp-content/uploads/2023/07/video-bg.jpg">
+    <meta property="og:description" content="MNB Soft's customized software solutions. Our team of experts delivers innovative and efficient software to meet your specific needs. Contact us today.">
+
+    <link rel="canonical" href="https://mnbsoft.com" />
+    <meta name="robots" content="index,follow" />
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+
+    <link rel="icon" href="~/images/favicon.svg" />
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon16.png" />
+
+    <!-- Apple Touch Icon (iOS) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-touch-icon.png" />
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="~/images/favicon/android192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="~/images/favicon/android512.png" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-01NNKW012G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-01NNKW012G');
+    </script>
+
+    <script type="application/ld+json">
+        {
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
+        "name": "MNB SOFT SOLUTION PVT LTD",
+        "brand": "MNB SOFT SOLUTION PVT LTD",
+        "description": "MNB Soft's customized software solutions. Our team of experts delivers innovative and efficient software to meet your specific needs. Contact us today.",
+        "url":"https://mnbsoft.com/",
+        "potentialAction": "contact us now",
+        "logo": "https://mnbsoft.com/images/logo/black-logo.png",
+        "image": "",
+        "contactPoint": {
+        "@@type": "ContactPoint",
+        "telephone": "+91 9311221776",
+        "email": "info@mnbsoft.com",
+        "contactType": "customer support",
+        "availableLanguage": "en,hindi "
+        },
+        "areaServed": {
+            "@@type": "Country",
+            "name": "India",
+            "sameAs": "https://en.wikipedia.org/wiki/India"
+          },
+        "sameAs": [
+        "https://www.facebook.com/MNBSOFTSOLUTION",
+        "https://www.instagram.com/mnb.soft.solution.pvt.ltd",
+        "https://twitter.com/mnbsoft",
+        "https://www.linkedin.com/company/mnb-soft-solution-pvt-ltd",
+        "https://in.pinterest.com/mnbsoftpvt",
+        "https://www.youtube.com/@@mnbsoft"]
+        }
+    </script>
+</head>
+
+<body class="home">
+    <div id="google_translate_element"></div>
+    <div class="page-wrapper">
+
+
+        <!-- Scroll To Top -->
+        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+        <!-- Main Header-->
+        <header class="main-header header-style-one header-2">
+
+            <!-- Header Lower -->
+            <div class="header-lower header-lower2 show-header-section">
+                <!-- Main box -->
+                <div class="main-box">
+
+                    <!--Nav Box-->
+                    <div class="nav-outer">
+                        <div class="logo-box">
+                            <div class="logo"><a href="Index"><img src="~/images/logo/white-logo.png" loading="lazy" alt="Mnbsoft Logo" title="Mnbsoft"></a></div>
+                        </div>
+                        <nav class="nav main-menu">
+                            <ul class="navigation">
+
+
+
+                                <li><a href="about-us">About us</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Partners</a>
+                                    <ul>
+
+                                        <li><a href="become-partner">Become a Partner</a></li>
+                                        <li><a href="affiliate-partner">Affiliate Partner</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="career">Career</a></li>
+                                <li><a href="contact-us">Contact</a></li>
+                                @* <li class="dropdown">
+                                    <a href="#">Login</a>
+                                    <ul>
+                                        <li><a href="adminLogin">Admin Login</a></li>
+                                        <li><a href="partner-login">Partner Login</a></li>
+                                    </ul>
+                                </li> *@
+                            </ul>
+                        </nav>
+                        <!-- Main Menu End-->
+                        <div class="outer-box">
+                            <!-- Example single danger button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-primary dropdown-toggle btn-language" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-language" aria-hidden="true"></i>
+                                    English
+                                </button>
+                                <ul class="dropdown-menu column-2 ">
+
+                                    <li onClick=(changeLanguage("en"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/us.png" loading="lazy" class="flag me-2" alt="English" />  English </label></li>
+                                    <li onClick=(changeLanguage("es"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/es.png" loading="lazy" class="flag me-2" alt="Español" />  Español </label></li>
+                                    <li onClick=(changeLanguage("pt"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/pt.png" loading="lazy" class="flag me-2" alt="Português" />  Português (Brasil)</label></li>
+                                    <li onClick=(changeLanguage("de"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/de.png" loading="lazy" class="flag me-2" alt="Deutsch" />  Deutsch</label></li>
+                                    <li onClick=(changeLanguage("fr"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/fr.png" loading="lazy" class="flag me-2" alt="Français" />  Français</label></li>
+                                    <li onClick=(changeLanguage("nl"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/nl.png" loading="lazy" class="flag me-2" alt="Nederlands" />  Nederlands</label></li>
+                                    <li onClick=(changeLanguage("ja"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/jp.png" loading="lazy" class="flag me-2" alt="JAPAN" />  日本語</label></li>
+
+
+                                    <li onClick=(changeLanguage("ar"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/sa.png" loading="lazy" class="flag me-2" alt="German" />  العربية</label></li>
+                                    <li onClick=(changeLanguage("id"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/id.png" loading="lazy" class="flag me-2" alt="Indonesia" />  Bahasa Indonesia</label></li>
+                                    <li onClick=(changeLanguage("th"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/th.png" loading="lazy" class="flag me-2" alt="German" />  ภาษาไทย</label></li>
+                                    <li onClick=(changeLanguage("vi"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/vi.png" loading="lazy" class="flag me-2" alt="German" />  Tiếng Việt</label></li>
+                                    <li onClick=(changeLanguage("fr"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/fr.png" loading="lazy" class="flag me-2" alt="Canada" />  Français (Canada)</label></li>
+                                    <li onClick=(changeLanguage("zh-TW"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/ch.png" loading="lazy" class="flag me-2" alt="Chaina" />  繁体中文</label></li>
+                                    <li onClick=(changeLanguage("it"))><label class="dropdown-item d-flex notranslate"><img src="~/images/flag/it.png" loading="lazy" class="flag me-2" alt="Italiano" />  Italiano</label></li>
+
+                                </ul>
+                            </div>
+                            <!-- Mobile Nav toggler -->
+                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                <nav class="menu-box">
+                    <div class="upper-box">
+                        <div class="nav-logo"><a href="Index"><img src="~/images/logo/white-logo.png" loading="lazy" alt="MNBSoft Logo"></a></div>
+                        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+                    </div>
+
+                    <ul class="navigation clearfix">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </ul>
+                    <ul class="contact-list-one">
+                        <li>
+                            <!-- Contact Info Box -->
+                            <div class="contact-info-box">
+                                <i class="icon lnr-icon-phone-handset"></i>
+                                <span class="title">Call Now</span>
+                                <a href="tel:+919311221776">+91 9311 221776</a>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- Contact Info Box -->
+                            <div class="contact-info-box">
+                                <span class="icon lnr-icon-envelope1"></span>
+                                <span class="title">Send Email</span>
+                                <a href="mailto:ask@mnbsoft.com"><span class="__cf_email__">ask@mnbsoft.com</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- Contact Info Box -->
+                            <div class="contact-info-box">
+
+                                <span class="icon bi bi-geo-alt"></span>
+                                <span class="title">Address</span>
+                                G-75, 2nd Floor, Sector 63, Noida, Chotpur, Uttar Pradesh 201301.
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <ul class="social-links">
+
+
+                        <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fmnbsoft" aria-label="x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> </li>
+                        <li><a href="https://www.facebook.com/mnbsoftsolution/" aria-label="facebook"><i class="fa-brands fa-facebook-f" target="_blank"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/mnb-soft-solution-pvt-ltd/?original_referer=https%3A%2F%2Fmnbsoft.in%2F " aria-label="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/mnb.soft.solution.pvt.ltd/" target="_blank" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/@@mnbsoft" aria-label="youtube"><i class="fa-brands fa-youtube" target="_blank"></i></a></li>
+                    </ul>
+                </nav>
+            </div><!-- End Mobile Menu -->
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <!--Logo-->
+                        <div class="logo">
+                            <a href="Index"><img src="~/images/logo/black-logo.png" loading="lazy" alt="img"></a>
+                        </div>
+
+                        <!--Right Col-->
+                        <div class="nav-outer">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-collapse show collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <!--Keep This Empty / Menu will come through Javascript-->
+                                    </ul>
+                                </div>
+                            </nav><!-- Main Menu End-->
+                            <!--Mobile Navigation Toggler-->
+                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+        </header>
+        <!--End Main Header -->
+        <!-- Hero Section Start -->
+        <section class="hero-section hero-2 bg-cover " style="background-image: url('/images/home-2/hero/hero-image2.webp');">
+            <div class="row g-4 justify-content-between align-items-center">
+                <div class="col-xxl-6 col-md-6">
+                    <div class="hero-content">
+                        <h1 class="wow fadeInUp" data-wow-delay=".2s">
+                            Empowering businesses with smart, secure, and <span>future-ready</span> solutions.
+
+                        </h1>
+                        <p class="hero-text wow fadeInUp" data-wow-delay=".4s">
+                            An innovative and robust software suite that revolutionizes how you work — crafted for businesses of any size, and developed by a company committed to protecting your privacy.
+                        </p>
+                        <div class="hero-button wow fadeInUp" data-wow-delay=".6s">
+                            <a href="contact-us" class="theme-btn btn-style-one">
+                                Lets Talk With Us
+                                <span class="icon">
+                                    <i class="lnr-icon-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-md-5">
+                    <div class="hero-box-items ">
+                        <div class="hero-box w-100 wow fadeInUp" data-wow-delay=".3s">
+
+                            <div class="content mt-0 ">
+
+                                <ul style="height: auto; opacity: 1;">
+                                    <li class="Featured"><a class="arrow-icon" href="#taskflier"><span class="app-icon"><img src="~/images/icontaskflier.png" loading="lazy" alt="TaskFlier" /></span><span class="mn-content"><span>Taskflier</span><small>All-in-One CRM and Project Management Platform.</small></span></a> </li>
+                                    <li class="Featured"><a class="arrow-icon" href="#mparchi"><span class="app-icon"><img src="~/images/mparchiicon.png" loading="lazy" alt="mparchi" /></span><span class="mn-content"><span>Mparchi</span><small>Simplify Sales, Purchases & Stock Management.</small></span></a> </li>
+                                    <li class="Featured"><a class="arrow-icon" href="#host"><span class="app-icon"><img src="~/images/iconhost.png" loading="lazy" alt="Host Guardians" /></span><span class="mn-content"><span>Host Guardians</span><small>Secure, Fast & Scalable Hosting for Every Need.</small></span></a> </li>
+                                    <li class="Featured"><a class="arrow-icon" href="#promo"><span class="app-icon"><img src="~/images/iconpromo.png" loading="lazy" alt="MNB Promo" /></span><span class="mn-content"><span>MNB Promo</span><small>Business-Ready Greetings – Auto Branding for All Occasions.</small></span></a> </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="Exploreall ">
+                                <h4 class="mb-0 text-white">Explore all products <span class="text-end pull-right"><i class="bi bi-arrow-right"></i></span> </h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section Start -->
+        <section class="service-section-2 section-padding fix pt-100">
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <h6 class="sub-title wow fadeInUp">
+                        <span class="triangle triangle1"></span>
+                        <span class="triangle triangle2"></span>
+
+                        Brands that trust us
+                    </h6>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Trusted by startups and Fortune 100 companies</h2>
+                </div>
+                <div class="row">
+                    <div class=" col-lg-12 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="">
+                            <img src="/images/trusted-companies.jpg" loading="lazy" alt="trusted companies" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="service-know-box wow fadeInUp" data-wow-delay=".3s">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="34" viewBox="0 0 24 34" fill="none">
+                            <defs>
+                                <linearGradient id="paint0_linear_1_745" x1="11.9987" y1="0.333008" x2="11.9987" y2="33.6663" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#099696" />
+                                    <stop offset="1" stop-color="#B2E66E" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M11.9987 13.6663H23.6654L5.33203 33.6663L10.332 18.6663H0.332031L13.6654 0.333008L11.9987 13.6663Z"
+                                  fill="url(#paint0_linear_1_745)" />
+                        </svg>
+                    </div>
+                    <p>MNB Soft Unlock The Potential Productivity &nbsp;<a href="about-us">Know All Services <i class="fa-regular fa-arrow-right"></i></a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="growth-section section-padding pb-80 bg-cover parallaxie" style="background-image: url('/images/home-3/growth-bg.jpg');">
+            <div class="sec-shape">
+                <img class="sway_Y__animation" src="~/images/growth-shape.png" loading="lazy" alt="Image">
+            </div>
+            <div class="auto-container">
+                <div class="sec-title">
+                    <div class="row g-4 justify-content-between align-items-center">
+                        <div class="col-xl-7 col-lg-7">
+                            <h6 class="text-white sub-title wow fadeInUp">
+                                <span class="triangle triangle1"></span>
+                                <span class="triangle triangle2"></span>
+                                Practical Technology. Trusted Results.
+                            </h6>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".2s">Who we are?.</h2>
+                            <p class="text-white">Throughout the whole history of our company, we have been building and maintaining an IT product for the purpose of assisting business entities in dealing with everyday operational issues. Our platform products include collaboration tools, events management, hosting, and outreach that we have developed to be user-friendly, consistent, and responsive.</p>
+                            <p class="text-white">We concentrate on what is effective, zapping the rest of the noise and catering to businesses only with what they require to operate better and expand with assuredness.</p>
+
+
+                        </div>
+                        <div class="col-xl-3 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                            <img src="~/images/award/about-logo.png" loading="lazy" alt="about-logo" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <div class="counter-section">
+                        <div class="auto-container">
+                            <div class="counter-wrapper">
+                                <div class="counter-box-one wow bounceInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                    <div class="count-box">
+                                        <h2 class="text-white"><span class="count-text" data-speed="3000" data-stop="200">0</span>K</h2>
+                                        <p class="text-white">Worldwide business Grow</p>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="counter-box-one wow bounceInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                    <div class="count-box">
+                                        <h2 class="text-white"><span class="count-text" data-speed="3000" data-stop="5">0</span>K+</h2>
+                                        <p class="text-white">Satisfied Clients</p>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="counter-box-one wow bounceInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                    <div class="count-box">
+                                        <h2 class="text-white"><span class="count-text" data-speed="3000" data-stop="10">0</span>+</h2>
+                                        <p class="text-white">Countries Served</p>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="counter-box-one wow bounceInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                                    <div class="count-box">
+                                        <h2 class="text-white"><span class="count-text" data-speed="3000" data-stop="5">0</span></h2>
+                                        <p class="text-white">Award winning</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="service-section-four pt-120 pb-90">
+            <div class="service-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="sec-title mb-40">
+                                <h6 class="sub-title wow fadeInUp">
+                                    <span class="triangle triangle1"></span>
+                                    <span class="triangle triangle2"></span>
+                                    Our Services
+                                </h6>
+                                <h2 class="title wow fadeInUp mb-30" data-wow-delay=".2s">Awards and Achievements</h2>
+                                <p>We are recognized globally for our commitment to excellence and innovation in digital solutions. </p>
+
+                            </div>
+                        </div>
+
+                        <div class="offset-md-3  col-md-4  wow fadeInUp" data-wow-delay=".4s">
+                            <div class="service-block ">
+
+                                <div class="content text-center align-items-center">
+                                    <h3 class="title"><a href="page-service-details.html">Rate on Clutch</a></h3>
+                                    <h2 class="d-flex justify-content-center align-items-center"><img src="~/images/award/clutch.png" loading="lazy" alt="clutch" />5.0 </h2>
+                                    <div class="rating"> <i class="bi bi-star-fill"></i>  <i class="bi bi-star-fill"></i>  <i class="bi bi-star-fill"></i>  <i class="bi bi-star-fill"></i>  <i class="bi bi-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-4 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-04.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-07.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-08.png" alt="award" loading="lazy" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class=" col-md-2 col-4 wow fadeInUp" data-wow-delay="1.2s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-21.jpg" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1.6s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-14.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1.8s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-16.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-26.png" alt="award" loading="lazy" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class=" col-md-2 col-4 wow fadeInUp" data-wow-delay="1.2s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-27.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1.6s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-28.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1.8s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-29.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1.6s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-23.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 wow fadeInUp" data-wow-delay="1.8s">
+                            <div class="service-block">
+                                <div class="icon">
+                                    <img src="~/images/award/badge-25.png" alt="award" loading="lazy" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Section Start -->
+        <div class="sec-title text-center mb-50">
+            <h2 class="text-anim wow fadeInUp animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Our Product Ecosystem</h2>
+            <p>We have a diverse portfolio, where each Products represents a unique vision and purpose.</p>
+        </div>
+
+        <section id="taskflier" class="common section-padding bg-cover parallaxie" style="background-image: linear-gradient(135deg, #5c62f3, #5f3bdf)">
+
+            <div class="auto-container">
+                <div class="sec-title">
+                    <div class="row g-4 justify-content-between align-items-center">
+                        <div class="col-xl-6 col-lg-6">
+                            <h6 class="text-white sub-title wow fadeInUp">
+                                <span class="triangle triangle1"></span>
+                                <span class="triangle triangle2"></span>
+                                Product 01
+                            </h6>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".2s">TaskFlier – Simplify Team Collaboration and Task Management</h2>
+                            <p class="text-white  wow fadeInUp" data-wow-delay=".4s">TaskFlier is a project and task management collective produced in response to teams that do not want to be complicated to organize. It facilitates effective delegation, allows tracking, and is accountable, all in one, easy-to-use interface.</p>
+
+                            <h4 class=" text-white mt-4  wow fadeInUp">Key Features</h4>
+                            <ul class="feature-list mt-2 wow fadeInUp" data-wow-delay=".6s">
+
+                                <li>Issues and keeps up with the employees in every department.</li>
+                                <li>Calendar, to-dos, and tasks.</li>
+                                <li>Visualization of project offsets and workload of a team.</li>
+                                <li>On-the-go status and monitoring of progress.</li>
+                                <li>Easy-to-use interface for both techies and non-techies.</li>
+
+                            </ul>
+                            <div class="hero-button wow fadeInUp animated animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                <a href="https://taskflier.com/" target="_blank" class="theme-btn btn-style-three">
+                                    Explore More
+                                    <span class="icon"><i class="flaticon-finance-arrow-right-svgrepo-com1-2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp relative" data-wow-delay=".5s">
+                            <img src="~/images/taskflier-main.png" alt="taskflier-icon" class="task-icon mt-30" loading="lazy" />
+                            <div class="borderimage"></div>
+
+                            <!--<div class="spin-main">  <img src="~/images/task-circle.png" class="rotate-img" alt="taskflier-icon" loading="lazy" /></div>-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="mparchi" class="common section-padding bg-cover parallaxie" style="background-image: linear-gradient(135deg, rgb(125, 173, 20), rgb(62, 155, 0)) ">
+
+            <div class="auto-container">
+                <div class="sec-title">
+                    <div class="row g-4 justify-content-between align-items-center">
+
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp relative" data-wow-delay=".5s">
+                            <img src="~/images/mparchi-main.png" alt="taskflier-icon" class="task-icon mt-30" loading="lazy" />
+                            <div class="borderimage"></div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6">
+                            <h6 class="text-white sub-title wow fadeInUp">
+                                <span class="triangle triangle1"></span>
+                                <span class="triangle triangle2"></span>
+                                Product 02
+                            </h6>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".2s">MParchi – Billing Software That’s Practical, Fast, and Easy to Use</h2>
+                            <p class="text-white  wow fadeInUp" data-wow-delay=".4s">Mparchi is a streamlined, low-cost billing program designed to help any business process invoices faster, track the state of their sales, and have a clear billing history, without the unnecessary cost and sophistication of high-level accounting packages.</p>
+
+                            <h4 class=" text-white mt-4  wow fadeInUp">Core Capabilities  </h4>
+                            <ul class="feature-list mt-2" data-wow-delay=".6s">
+
+                                <li>Escapement billing produces fast invoicing.</li>
+                                <li>Customer and sales history management.</li>
+                                <li>TTC/GST payments calculations and print-ready Receipt.</li>
+                                <li>Multi-user and multi-site support.</li>
+                                <li>Works perfectly for retail, shop, and service-based businesses.</li>
+
+                            </ul>
+                            <div class="hero-button wow fadeInUp animated animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                <a href="https://mparchi.com/" target="_blank" class="theme-btn btn-style-three">
+                                    Explore More
+                                    <span class="icon"><i class="flaticon-finance-arrow-right-svgrepo-com1-2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="host" class="common section-padding bg-cover parallaxie" style="background-image: linear-gradient(135deg, #1062fe, #1062fe) ">
+
+            <div class="auto-container">
+                <div class="sec-title">
+                    <div class="row g-4 justify-content-between align-items-center">
+                        <div class="col-xl-6 col-lg-6">
+                            <h6 class="text-white sub-title wow fadeInUp">
+                                <span class="triangle triangle1"></span>
+                                <span class="triangle triangle2"></span>
+                                Product 03
+                            </h6>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".2s">Host Guardians – Secure, Scalable, High-Performance Hosting</h2>
+                            <p class="text-white  wow fadeInUp" data-wow-delay=".4s">A stable hosting plays a pivotal role in the organization of any business nowadays. Host Guardians provides commercial quality hosting services according to the varied functional requirements of business collaborations, such as small websites to I/O hungry applications.</p>
+
+                            <h4 class=" text-white mt-4  wow fadeInUp ">Hosting Services Include</h4>
+                            <ul class="feature-list mt-2" data-wow-delay=".6s">
+
+                                <li>Dedicated servers of Windows and Linux servers.</li>
+                                <li>Custom-configured cloud hosting, Scalable cloud hosting.</li>
+                                <li>Shared hosting and VPS (Virtual Private Servers).</li>
+                                <li>Registration of the domain and SSL certification.</li>
+                                <li>User-friendly control panels that monitor tools.</li>
+                                <li>The experienced system administrators provide technical support.</li>
+
+                            </ul>
+                            <div class="hero-button wow fadeInUp" data-wow-delay=".6s">
+                                <a href="https://www.hostguardians.com/" class="theme-btn btn-style-three">
+                                    Explore More
+                                    <span class="icon"><i class="flaticon-finance-arrow-right-svgrepo-com1-2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp relative " data-wow-delay=".5s">
+                            <img src="~/images/host-main.png" alt="taskflier-icon" class="task-icon mt-30" loading="lazy" />
+                            <div class="borderimage"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="promo" class="common section-padding bg-cover parallaxie" style="background-image: linear-gradient(135deg, rgb(151, 179, 0), rgb(128, 151, 2))">
+
+            <div class="auto-container">
+                <div class="sec-title">
+                    <div class="row g-4 justify-content-between align-items-center">
+
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp relative" data-wow-delay=".5s">
+                            <img src="~/images/promo-main.png" alt="taskflier-icon" class="task-icon mt-30" loading="lazy" />
+                            <div class="borderimage"></div>
+
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6">
+                            <h6 class="text-white sub-title wow fadeInUp">
+                                <span class="triangle triangle1"></span>
+                                <span class="triangle triangle2"></span>
+                                Product 04
+                            </h6>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".2s">MNB Promo – Design Posters and Banners Instantly—No Design Experience Needed</h2>
+                            <p class="text-white  wow fadeInUp" data-wow-delay=".4s">MNB Promo is a free poster and banner design tool that is simple to use, created to serve individuals, businesses, and marketers requiring immediate visuals. You can use it to create promotional materials that look good and get results, whether you are promoting a product, event, offer, or a service.</p>
+
+                            <h4 class=" text-white mt-4  wow fadeInUp ">What You Can Do</h4>
+                            <ul class="feature-list mt-2  wow fadeInUp" data-wow-delay=".6s">
+
+                                <li>Use templates of different categories.</li>
+                                <li>Make personalizations in text, colors, images, and layout.</li>
+                                <li>Pay zero dollars for the downloading of designs.</li>
+                                <li>Design festival posters, company flyers, covers of social networks, and so on.</li>
+                                <li>Mobile and desktop work- there is no installation of any software expected.</li>
+
+
+                            </ul>
+                            <div class="hero-button wow fadeInUp animated animated" data-wow-delay=".8s">
+                                <a href="https://mnbpromo.com/" target="_blank" class="theme-btn btn-style-three">
+                                    Explore More
+                                    <span class="icon"><i class="flaticon-finance-arrow-right-svgrepo-com1-2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="ks-project-area">
+            <div class="auto-container">
+                <div class="sec-title text-center mb-50">
+
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Your privacy is our responsibility</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ks-project-item ks-project-panel" style="background-image: url('/images/secure.jpg');">
+                            <div class="d-flex justify-content-end">
+                                <div class="ks-project-content-wrap">
+                                    <div class="ks-project-arrow">
+
+                                        <i class="flaticon-finance-arrow-right-svgrepo-com1-2"></i>
+
+                                    </div>
+                                    <div class="ks-project-content">
+                                        <p class="ks-project-text">We believe that trust is paramount in a relationship. We do not own or sell your <br /> data,  and we most certainly do not bank on advertising-based business models. The only way we make money is from the software license fees you pay us.</p>
+                                        <div class="ks-project-btn">
+                                            <a href="" class="ks-btn-black">
+                                                <span>
+                                                    <span class="text-1">Watch Video</span>
+                                                    <span class="text-2">Watch Video</span>
+                                                </span>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial Section Start -->
+        <section class="testimonial-section fix section-padding pt-0">
+            <div class="auto-container">
+                <div class="testimonial-wrapper bg-cover" style="background-image: url(/images/home-1/testimonial/testimonial-bg.png);">
+                    <div class="sec-title text-center">
+                        <h6 class="sub-title wow fadeInUp">
+                            <span class="triangle triangle1"></span>
+                            <span class="triangle triangle2"></span>
+                            Testimonials
+                        </h6>
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                            What our top Customers <br> Say About us
+                        </h2>
+                    </div>
+                    <div class="swiper testimonial-slider fix">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-box-items">
+                                    <div class="client-info-items">
+                                        <div class="client-image">
+                                            <img src="~/images/home-1/testimonial/client-01.png" loading="lazy" alt="img" />
+                                            <div class="quote-icon">
+                                                <i class="lnr-icon-quote"></i>
+                                            </div>
+                                        </div>
+                                        <div class="client-content">
+                                            <h5>Manoj Kumar</h5>
+                                            <span>CEO & Founder</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>A genuinely useful suite of business management software worth every penny. I personally recommend to all MSMEs like mine.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-box-items">
+                                    <div class="client-info-items">
+                                        <div class="client-image">
+                                            <img src="~/images/client3.png" loading="lazy" alt="img" />
+                                            <div class="quote-icon">
+                                                <i class="lnr-icon-quote"></i>
+                                            </div>
+                                        </div>
+                                        <div class="client-content">
+                                            <h5>Akhilesh Shrivastav</h5>
+                                            <span>Founder of Jaspe Perfume</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>A wonderful step and must say the need if the hour. With a team of dedicated professionals they're providing excellent services</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-box-items">
+                                    <div class="client-info-items">
+                                        <div class="client-image">
+                                            <img src="~/images/client2.png" loading="lazy" alt="img" />
+                                            <div class="quote-icon">
+                                                <i class="lnr-icon-quote"></i>
+                                            </div>
+                                        </div>
+                                        <div class="client-content">
+                                            <h5>Ashok Sharma</h5>
+                                            <span>manager at Oman</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>Vry nyc business management software, reduced a lot of workload of my team, user friendy, full value of money.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-box-items">
+                                    <div class="client-info-items">
+                                        <div class="client-image">
+                                            <img src="~/images/client1.png" loading="lazy" alt="img" />
+                                            <div class="quote-icon">
+                                                <i class="lnr-icon-quote"></i>
+                                            </div>
+                                        </div>
+                                        <div class="client-content">
+                                            <h5>MI. AHMAD</h5>
+                                            <span>NV Shoppe Founder</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>Highly Recommend MNB Soft Solutions! Their team is highly professional, skilled, and dedicated to providing customized solutions tailored to meet client needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-dot mt-5 mb-0">
+                            <div class="dot2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="news-secton section-padding pt-0 fix">
+            <img src="~/images/MNBTeam.jpg" alt="team" loading="lazy" />
+            <div class="auto-container mnbteam">
+
+                <div class="row ">
+                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="news-box-items pb-80">
+
+                            <div class="sec-title text-center mb-50">
+                                <h6 class="sub-title wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                                    <span class="triangle triangle1"></span>
+                                    <span class="triangle triangle2"></span>
+                                    Our Benifits
+                                </h6>
+                                <h2 class="wow fadeInUp animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Why Businesses Trust MNB Soft Solutions</h2>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                                    <div class="icon-items-style-2">
+                                        <div class="icon"><i class="flaticon-finance-business-expense-svgrepo-com-1"></i></div>
+                                        <div class="content">
+                                            <h3>Reliable Infrastructure</h3>
+                                            <p>Whether you host or utilize any of our ticketing systems, we have designed all of them keeping uptime, speed, and data protection as the first priorities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                    <div class="icon-items-style-2">
+                                        <div class="icon"><i class=" lnr-icon-layers"></i></div>
+                                        <div class="content">
+                                            <h3>Responsive Support</h3>
+                                            <p>We offer our products with knowledgeable up to date services. In case anything calls attention, we have a team to negotiate and be responsible</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                    <div class="icon-items-style-2">
+                                        <div class="icon"><i class="flaticon-business-023-lifesaver"></i></div>
+                                        <div class="content">
+                                            <h3>Scalable to Your Growth</h3>
+                                            <p>Start with what you need and grow when the time is right. Our platforms can be used positively over a long period of time and grow without platforming</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                    <div class="icon-items-style-2">
+                                        <div class="icon"><i class="lnr-icon-folder-open"></i></div>
+                                        <div class="content">
+                                            <h3>Professional Integrity</h3>
+                                            <p>We do not tie customers to unfriendly contracts, and we do not ram home services that they do not need. We strive to provide long-term value creation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-30">
+                                <a href="about-us" class="theme-btn btn-style-two mt-4">
+                                    About us
+                                    <span class="icon"><i class="flaticon-finance-arrow-right-svgrepo-com1-2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-contact-section fix career pb-80">
+            <div class="auto-container">
+                <div class="cta-contact-wrapper bg-cover" style="background-image: url('/images/home-1/cta-bg.jpg')">
+                    <div class="left-shape float-bob-x">
+                        <img src="~/images/home-1/left-shape.png" loading="lazy" alt="img">
+                    </div>
+                    <h3 class="font-size-32 text-white font-weight-600 wow fadeInUp animated" data-wow-delay=".3s">Find opportunities right for you</h3>
+                    <a href="" class="theme-btn btn-style-one wow fadeInUp animated" data-wow-delay=".5s">Explore Careers</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer Section Start -->
+        <footer class="footer-section-2 fix footer-bg">
+
+            <div class="footer-shape">
+            </div>
+            <div class="auto-container">
+                <div class="footer-top-wrapper">
+                    <a href="Index" class="footer-logo wow fadeInUp" data-wow-delay=".3s">
+                        <img src="~/images/logo/white-logo.png" alt="img" loading="lazy">
+                    </a>
+                    <div class="social-icon wow fadeInUp" data-wow-delay=".5s">
+                        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmnbsoft" aria-label="x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/mnbsoftsolution/" aria-label="facebook"><i class="fa-brands fa-facebook-f" target="_blank"></i></a>
+                        <a href="https://www.linkedin.com/company/mnb-soft-solution-pvt-ltd/?original_referer=https%3A%2F%2Fmnbsoft.in%2F " aria-label="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/mnb.soft.solution.pvt.ltd/" target="_blank" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@@mnbsoft" aria-label="youtube"><i class="fa-brands fa-youtube" target="_blank"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget-wrapper style-2">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="footer-widget-items mt-30">
+                                <div class="widget-title mb-25">
+                                    <h3 class="font-size-24 text-white font-weight-500">Head office</h3>
+                                </div>
+                                <div class="footer-content">
+                                    <p class="text-white">G-75, 2nd Floor, Sector 63, Noida, Chotpur, Uttar Pradesh 201301.</p>
+                                    <ul class="contact-list-2">
+                                        <li>
+                                            <a href="tel:+919311221776">+91 9311 221776</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto=" ask@mnbsoft.com"><span class="__cf_email__">ask@mnbsoft.com</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="footer-widget-items mt-30">
+                                <div class="widget-title mb-25">
+                                    <h3 class="font-size-24 text-white font-weight-500">Our Products</h3>
+                                </div>
+                                <ul class="user-links">
+
+                                    <li><a href="https://taskflier.com" target="_blank">TaskFlier</a></li>
+                                    <li><a href="https://mparchi.com" target="_blank">Mparchi</a></li>
+                                    <li><a href="https://www.hostguardians.com/" target="_blank">Host Guardians</a></li>
+                                    <li><a href="https://mnbpromo.com/" target="_blank">MNB Promo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="footer-widget-items mt-30">
+                                <div class="widget-title mb-25">
+                                    <h3 class="font-size-24 text-white font-weight-500">Quick Link</h3>
+                                </div>
+                                <div class="user-links-area">
+                                    <ul class="user-links">
+                                        <li><a href="about-us">About Us</a></li>
+                                        <li><a href="our-team">Our Team</a></li>
+
+                                        <li><a href="career">Careers</a></li>
+                                        <li><a href="contact-us">Contact Us</a></li>
+                                    </ul>
+                                    <ul class="user-links">
+                                        <li><a href="become-partner">Become a Partner</a></li>
+                                        <li><a href="affiliate-partner">Affiliate</a></li>
+                                        <li><a href="partner-login">Partner Login</a></li>
+                                        <li><a href="affiliate-login">Affiliate Login</a></li>
+                                        <li><a href="awards">Awards</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="footer-widget-items mt-30">
+                                <div class="widget-title mb-25">
+                                    <h3 class="font-size-24 text-white font-weight-500">Our Solutions</h3>
+                                </div>
+                                <ul class="user-links">
+
+
+                                    <li><a href="security">Security</a></li>
+                                    <li><a href="terms-of-service">Terms Of Service</a></li>
+                                    <li><a href="privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="cookie-policy">Cookie Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer-text wow fadeInUp" data-wow-delay=".3s">Copyright © 2025 MNB Soft Solution.  All Rights Reserved</p>
+            </div>
+        </footer>
+
+
+    </div><!-- End Page Wrapper -->
+
+
+
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+        }
+
+        function changeLanguage(lang) {
+            const select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+
+        window.addEventListener("load", () => {
+            if (!document.getElementById("google-translate-script")) {
+                const script = document.createElement("script");
+                script.id = "google-translate-script";
+                script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/gsap.js"></script>
+    <script src="~/js/gsap-scroll-to-plugin.js"></script>
+    <script src="~/js/gsap-scroll-smoother.js"></script>
+    <script src="~/js/gsap-scroll-trigger.js"></script>
+    <script src="~/js/parallaxie.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/bxslider.js"></script>
+    <script src="~/js/nice-select.min.js"></script>
+    <script src="~/js/knob.js"></script>
+    <script src="~/js/appear.js"></script>
+    <script src="~/js/swiper.min.js"></script>
+    <script src="~/js/mixitup.js"></script>
+    <script src="~/js/script.js"></script>
+</body>
+</html>

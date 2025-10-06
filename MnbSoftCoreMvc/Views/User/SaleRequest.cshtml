@@ -1,0 +1,298 @@
+﻿@{
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+    ViewData["Title"] = "Sale Request";
+}
+
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-6 m-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h4 class="card-title">Sale Request</h4>
+                            </div><!--end col-->
+                        </div>  <!--end row-->
+                    </div><!--end card-header-->
+                    <div class="card-body pt-0">
+                        <form method="post" action="/User/SaleRequest">
+                            <div class="mb-2">
+                                <label class="form-label">Select Product</label>
+                                <select class="form-select" id="productSelect" name="productName" required>
+                                    <option value="">-- Select Product --</option>
+                                    <option value="Taskflier">Taskflier</option>
+                                    <option value="Host Guardians">Host Guardians</option>
+                                    <option value="Mparchi">Mparchi</option>
+                                    <option value="MNB Promo">MNB Promo</option>
+                                </select>
+                                <input type="hidden" id="hdnrank" name="rankNo" value="@ViewBag.rank" />
+                                </>
+
+                                <!-- Taskflier Section -->
+                                <div id="taskflierSection">
+                                    <div class="mb-2">
+                                        <label class="form-label">Select Plan</label>
+                                        <select class="form-select" name="planName">
+                                            <option value="Basic">Basic</option>
+                                            <option value="Standard">Standard</option>
+                                            <option value="Premium">Premium</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label">Plan Type</label>
+                                        <select class="form-select" name="planTypeTaskflier">
+                                            <option value="Monthly">Monthly</option>
+                                            <option value="Yearly">Yearly</option>
+                                        </select>
+                                    </div>
+                                    @* <div class="mb-2">
+                                    <label class="form-label">No of Employee</label>
+                                    <input type="number" class="form-control">
+                                </div> *@
+                                </div>
+
+                                <!-- Host Guardians Section -->
+                                <div id="hostGuardianSection">
+                                    <div class="mb-2">
+                                        <label class="form-label">Select Server</label>
+                                        <select id="serverSelect" class="form-select" name="serverName">
+                                            <option value="">-- Select --</option>
+                                            <option value="Linux">Linux</option>
+                                            <option value="Windows">Windows</option>
+                                            <option value="Tally On Cloud">Tally On Cloud</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Plan Type -->
+                                    <div class="mb-2" id="planTypeDiv">
+                                        <label class="form-label">Plan Type</label>
+                                        <select id="planType" class="form-select" name="planType"></select>
+                                    </div>
+
+                                    <div class="mb-2 d-none" id="configDiv">
+                                        <label class="form-label">Select configuration</label>
+                                        <select class="form-select" name="config">
+                                            <option value="1 vCPU / 2GB RAM">1 vCPU / 2GB RAM</option>
+                                            <option value="2 vCPU / 4GB RAM">2 vCPU / 4GB RAM</option>
+                                            <option value="4 vCPU / 8GB RAM">4 vCPU / 8GB RAM</option>
+                                            <option value="8 vCPU / 32GB RAM">8 vCPU / 32GB RAM</option>
+                                            <option value="16 vCPU / 64GB RAM">16 vCPU / 64GB RAM</option>
+                                            <option value="32 vCPU / 128 GB RAM">32 vCPU / 128 GB RAM</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Common Section -->
+                                <div id="commonSection">
+                                    <div class="mb-2 d-none" id="usersDiv">
+                                        <label class="form-label">No of Users</label>
+                                        <input type="number" class="form-control numeric-only" name="noOfUser">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Company Name</label>
+                                        <input type="text" class="form-control alpha-dot-comma-only" name="company" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label">Mobile No</label>
+                                        <input type="text" class="form-control numeric-only" maxlength="10" name="mobile" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label">Email ID</label>
+                                        <input type="email" class="form-control email-only" name="email" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label">Amount</label>
+                                        <input type="text" class="form-control numeric-only" maxlength="10" id="amount" name="amount" required>
+                                    </div>
+
+                                    @* <div class="mb-2">
+                                        <label class="form-label">Commission(%)</label>
+                                        <input type="text" id="commissionPer" name="commissionPer" class="form-control" readonly />
+                                    </div> *@
+
+                                    @* <div class="mb-2">
+                                        <label class="form-label">Commission Amount</label>
+                                        <input type="text" id="commissionAmount" name="commissionAmount" class="form-control" readonly />
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">GST(%)</label>
+                                        <input type="text" class="form-control numeric-only" maxlength="10" id="gst" name="gst" required>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">TDS(%)</label>
+                                        <input type="text" class="form-control numeric-only" maxlength="10" id="tds" name="tds" required>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Payable Amount</label>
+                                        <input type="text" id="payableAmount" class="form-control" name="payableAmount" readonly>
+                                    </div> *@
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Sale Type</label>
+                                        <select class="form-select" name="saleType">
+                                            <option value="Paid">Paid</option>
+                                            <option value="Request">Request</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Remarks</label>
+                                        <textarea class="form-control alpha-numeric-dot-comma-only" rows="3" name="remarks"></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-danger">Cancel</button>
+                        </form>
+
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div> <!--end col-->
+
+        </div>
+    </div>
+</div>
+@* <script>
+    $(document).ready(function () {
+        $("#productSelect").change(function () {
+            var productName = $(this).val();
+            var rankNo = $("#hdnrank").val();
+
+            if (productName !== "" && rankNo !== "") {
+                $.ajax({
+                    url: '/User/GetCommission',
+                    type: 'GET',
+                    data: { productName: productName, rankNo: rankNo },
+                    success: function (res) {
+                        if (res && res.commissionPer) {
+                            $("#commissionPer").val(res.commissionPer);
+                        } else {
+                            $("#commissionPer").val("");
+                        }
+                    }
+                });
+            } else {
+                $("#commissionPer").val("");
+            }
+        });
+    });
+</script>
+<script>
+    function calculatePayable() {
+        var amount = parseFloat($("#amount").val()) || 0;
+        var commission = parseFloat($("#commissionPer").val()) || 0;
+        var gst = parseFloat($("#gst").val()) || 0;
+        var tds = parseFloat($("#tds").val()) || 0;
+
+        // Calculate deductions
+        var commissionAmt = (amount * commission) / 100;
+        var gstAmt = (amount * gst) / 100;
+        var tdsAmt = (amount * tds) / 100;
+
+        // Final payable
+        var payable = amount - (commissionAmt + gstAmt + tdsAmt);
+
+        // Update fields
+        $("#commissionAmount").val(commissionAmt.toFixed(2));
+        $("#payableAmount").val(payable.toFixed(2));
+    }
+
+    $(document).ready(function () {
+        $("#amount, #commissionPer, #gst, #tds").on("input", function () {
+            calculatePayable();
+        });
+    });
+</script>
+ *@
+
+<script>
+    $(document).ready(function () {
+        let $usersDiv = $("#usersDiv");
+
+        $("#taskflierSection, #hostGuardianSection").hide();
+
+        $("#productSelect").change(function () {
+            var selected = $(this).val();
+
+            if (selected === "Taskflier") {
+                $("#taskflierSection").show();
+                $("#hostGuardianSection").hide();
+                $usersDiv.removeClass("d-none");
+            }
+            else if (selected === "Host Guardians") {
+                $("#hostGuardianSection").show();
+                $("#taskflierSection").hide();
+                $usersDiv.addClass("d-none");
+            }
+            else {
+                $("#taskflierSection, #hostGuardianSection").hide();
+                $usersDiv.addClass("d-none");
+            }
+        });
+    });
+</script>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#serverSelect").change(function () {
+                let selected = $(this).val();
+                let $planType = $("#planType");
+                let $configDiv = $("#configDiv");
+                let $usersDiv = $("#usersDiv");
+
+                $planType.empty();
+
+                if (selected === "Linux" || selected === "Windows") {
+                    $planType.append(`<option value="1 Month">1 Month</option>
+                                      <option value="6 Months">6 Months</option>
+                                      <option value="12 Months">12 Months</option>
+                                      <option value="24 Months">24 Months</option>
+                                      <option value="36 Months">36 Months</option>`);
+                    $configDiv.removeClass("d-none");
+                    $usersDiv.addClass("d-none");
+
+                } else if (selected === "Tally On Cloud") {
+
+                    $planType.append(`<option value="Quarterly">Quarterly</option>
+                                      <option value="Half Yearly">Half Yearly</option>
+                                      <option value="Yearly">Yearly</option>`);
+                    $configDiv.addClass("d-none");
+                    $usersDiv.removeClass("d-none");
+                } else {
+                    $configDiv.addClass("d-none");
+                    $usersDiv.addClass("d-none");
+                }
+            });
+        });
+    </script>
+}
+
+<script>
+    $(document).ready(function () {
+        @if (TempData["Success"] != null)
+        {
+                 <text>
+                 Swal.fire({
+                     icon: 'success',
+                     title: 'Success',
+                     text: '@TempData["Success"]'
+                 });
+                 </text>
+        }
+        else if (TempData["Err"] != null)
+        {
+                  <text>
+                  Swal.fire({
+                      icon: 'error',
+                      title: 'Error',
+                      text: '@TempData["Err"]'
+                  });
+                  </text>
+        }
+    });
+</script>

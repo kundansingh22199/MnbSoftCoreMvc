@@ -1,0 +1,237 @@
+﻿@model BusinessEntity.ModPartner
+@{
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+    ViewData["Title"] = "Profile";
+}
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header border-0 flex-wrap align-items-start">
+                        <div class="row d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
+                                <div class="d-flex align-items-center flex-row flex-wrap">
+                                    <div class="position-relative me-3">
+                                        <!-- Profile Image -->
+                                        <img id="profileImage" src="@(string.IsNullOrEmpty(Model?.profileImage)
+                                         ? "/assets/images/users/avatar-7.jpg" : Model.profileImage)" alt="Profile" height="120" class="rounded-circle">
+
+                                        <!-- Hidden file input -->
+                                        <input type="file" id="fileInput" accept="image/*" style="display:none;" />
+
+                                        <!-- Camera Icon -->
+                                        <a href="javascript:void(0)" onclick="document.getElementById('fileInput').click();"
+                                           class="thumb-md justify-content-center d-flex align-items-center bg-primary text-white rounded-circle position-absolute end-0 bottom-0 border border-3 border-card-bg">
+                                            <i class="fas fa-camera"></i>
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="fw-semibold fs-22 mb-1">@Model.fullName</h5>
+                                        <p class="mb-0 text-muted fw-medium">(@Model.partnerCode)</p>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="card-body pt-0">
+                        <h4 class="card-title">Description</h4>
+                        <form method="post" action="/User/Profile">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6">
+                                    <ul class="list-style-1">
+                                        <li><label class="custom-label-2 mb-0">Partner Code</label><input id="checkuot-form-cname" name="partnerCode" class="form-control alfa-numeric-only" value="@Model.partnerCode" maxlength="8" readonly></li>
+                                        <li><label class="custom-label-2 mb-0">Email :</label><input id="checkuot-form-cname" name="businessEmail" type="email" value="@Model.businessEmail" class="form-control email-only" readonly></li>
+                                        <li><label class="custom-label-2 mb-0">Company Name</label><input id="checkuot-form-cname" name="company" class="form-control alpha-dot-comma-only" value="@Model.company" readonly></li>
+                                        <li><label class="custom-label-2 mb-0">Website :</label><input id="checkuot-form-cname" name="companyWebsite" value="@Model.companyWebsite" class="form-control website-only" readonly></li>
+                                        <hr />
+                                        <li><label class="custom-label-2 mb-0">Country :</label><input id="checkuot-form-cname" name="country" class="form-control alpha-dot-only" value="@Model.country" required></li>
+                                        <li><label class="custom-label-2 mb-0">State :</label><input id="checkuot-form-cname" name="state" class="form-control alpha-dot-only" value="@Model.state" required></li>
+                                        <li><label class="custom-label-2 mb-0">City :</label><input id="checkuot-form-cname" name="city" class="form-control alpha-dot-only" value="@Model.city" required></li>
+                                        <li><label class="custom-label-2 mb-0">Address :</label><input id="checkuot-form-cname" name="address" class="form-control alpha-numeric-dot-comma-only" value="@Model.address" required></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <ul class="list-style-1">
+                                        <li><label class="custom-label-2 mb-0">Contact No :</label><input id="checkuot-form-cname" name="mobile" class="form-control numeric-only" value="@Model.mobile" maxlength="10" readonly></li>
+                                        <li><label class="custom-label-2 mb-0">Gst Number</label><input id="checkuot-form-cname" name="gstNo" class="form-control alfa-numeric-only" value="@Model.gstNo" maxlength="15" readonly></li>
+                                        <li><label class="custom-label-2 mb-0">Joining Date :</label><input id="checkuot-form-cname" name="createDate" class="form-control" value="@Model.createDate.ToString("dd MMM yyyy hh:mm:ss")" readonly></li>
+                                        <li><label class="custom-label-2 mb-0">Account Status :</label><span><input id="checkuot-form-cname" name="status" class="form-control @(Model.status == 0 ? "text-warning": Model.status == 1 ? "text-success" : "text-danger")" value="@(Model.status == 1 ? "Active" : "Inactive")" readonly></span></li>
+                                        <hr />
+                                        <li><label class="custom-label-2 mb-0">Full Name :</label><input type="text" class="form-control" name="fullName" value="@Model.fullName" /> </li>
+                                        <li><label class="custom-label-2 mb-0">Office Branch</label><input id="checkuot-form-cname" name="branchOfficeLocation" class="form-control alpha-dot-comma-only" value="@Model.branchOfficeLocation"></li>
+                                        <li><label class="custom-label-2 mb-0">Team Size :</label><input id="checkuot-form-cname" name="teamSize" class="form-control" value="@Model.teamSize" required></li>
+                                        <li><label class="custom-label-2 mb-0">Why Become Reseller :</label><input id="checkuot-form-cname" name="whyBecomeReseller" class="form-control" value="@Model.whyBecomeReseller" required></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="card-footer d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="mb-md-2 mb-3 exp-del">
+                            <span class="d-block mb-1"><i class="fas fa-circle me-2 op4"></i>Currently Working at  <strong>@Model.company</strong></span>
+                            @{
+                                var createDate = Model.createDate;
+                                var today = DateTime.Now;
+
+                                int years = today.Year - createDate.Year;
+                                int months = today.Month - createDate.Month;
+                                int days = today.Day - createDate.Day;
+
+                                // Adjust if months or days are negative
+                                if (days < 0)
+                                {
+                                    months--;
+                                    days += DateTime.DaysInMonth(createDate.Year, createDate.Month);
+                                }
+                                if (months < 0)
+                                {
+                                    years--;
+                                    months += 12;
+                                }
+                            }
+                            <span>
+                                <i class="fas fa-circle me-2 op4"></i>
+                                @years Yrs @months Months @days Days Of Partner with <strong>MNB Soft Solution Pvt Ltd</strong>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--end row-->
+    </div><!-- container -->
+    <!--Start Rightbar-->
+    <!--Start Rightbar/offcanvas-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+            <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+            <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h6>Account Settings</h6>
+            <div class="p-2 text-start mt-3">
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch1">
+                    <label class="form-check-label" for="settings-switch1">Auto updates</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch2" checked="">
+                    <label class="form-check-label" for="settings-switch2">Location Permission</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="settings-switch3">
+                    <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+                </div><!--end form-switch-->
+            </div><!--end /div-->
+            <h6>General Settings</h6>
+            <div class="p-2 text-start mt-3">
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch4">
+                    <label class="form-check-label" for="settings-switch4">Show me Online</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch5" checked="">
+                    <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="settings-switch6">
+                    <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+                </div><!--end form-switch-->
+            </div><!--end /div-->
+        </div><!--end offcanvas-body-->
+    </div>
+    <!--end Rightbar/offcanvas-->
+    <!--end Rightbar-->
+    <!--Start Footer-->
+
+    <footer class="footer text-center text-sm-start d-print-none">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-0 rounded-bottom-0">
+                        <div class="card-body">
+                            <p class="text-muted mb-0">
+                                ©
+                                <script>document.write(new Date().getFullYear())</script>2025
+                                MNB Soft Solution
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--end footer-->
+</div>
+<script>
+    $("#fileInput").change(function () {
+        var formData = new FormData();
+        formData.append("file", this.files[0]);
+
+        $.ajax({
+            url: "/User/UpdateProfilePhoto",  // Controller Action
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (res) {
+                if (res.success) {
+                    // Update image preview instantly
+                    $("#profileImage").attr("src", res.newPath + "?t=" + new Date().getTime());
+                    Swal.fire("Updated!", "Profile photo updated successfully", "success")
+                        .then(() => {
+                            location.reload();
+                        });
+                } else {
+                    Swal.fire("Error", res.message, "error");
+                }
+            },
+            error: function () {
+                Swal.fire("Error", "Something went wrong", "error");
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        @if (TempData["Success"] != null)
+        {
+                    <text>
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: '@TempData["Success"]'
+                    });
+                    </text>
+        }
+        else if (TempData["Err"] != null)
+        {
+                    <text>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: '@TempData["Err"]'
+                    });
+                    </text>
+        }
+    });
+</script>

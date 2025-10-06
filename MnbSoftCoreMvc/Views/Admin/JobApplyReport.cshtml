@@ -1,0 +1,105 @@
+﻿@model List<BusinessEntity.ModCarrier>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Job Apply Report";
+}
+<!-- Page Content-->
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h4 class="card-title">@ViewBag.titlename</h4>
+                            </div><!--end col-->
+                        </div>  <!--end row-->
+                    </div><!--end card-header-->
+                    <div class="card-body pt-0">
+                        <div class="table-responsive">
+                            <table class="table datatable" id="datatable_2">
+                                <thead class="">
+                                    <tr>
+                                        <th>Sl.No</th>
+                                        <th>Name</th>
+                                        <th>Mobile</th>
+                                        <th>Email</th>
+                                        <th>Year Of Graduation</th>
+                                        <th>Gender</th>
+                                        <th>Experience</th>
+                                        <th>Current Employer</th>
+                                        <th>Current Ctc</th>
+                                        <th>Expected Ctc</th>
+                                        <th>Notice Period</th>
+                                        <th>Skill Set</th>
+                                        <th>Resume</th>
+                                        <th>Status</th>
+                                        <th>Create Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        int i = 1;
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@(i++)</td>
+                                                <td>@item.firstName @item.lastName</td>
+                                                <td>@item.mobile</td>
+                                                <td>@item.email</td>
+                                                <td>@item.yearOfGraduation</td>
+                                                <td>@item.gender</td>
+                                                <td>@item.yearOfExperience</td>
+                                                <td>@item.currentEmployer</td>
+                                                <td>@item.currentCtc</td>
+                                                <td>@item.expectedCtc</td>
+                                                <td>@item.noticePeriod</td>
+                                                <td>@item.skillSet</td>
+                                                <td>
+                                                    @if (!string.IsNullOrEmpty(item.uploadResume))
+                                                    {
+                                                        <a href="/uploads/resumes/@item.uploadResume" target="_blank">View Resume</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-muted">No File</span>
+                                                    }
+                                                </td>
+                                                <td class="text-end">
+                                                    <span class="btn btn-sm px-2 align-middle @(item.status == 0 ? "badge bg-warning-subtle text-warning" : item.status == 1 ? "badge bg-primary-subtle text-primary" : "badge bg-danger-subtle text-danger")">
+                                                        @(item.status == 0 ? "Pending" : item.status == 1 ? "Approved" : "Rejected")
+                                                    </span>
+                                                </td>
+                                                <td>@item.createDate.ToString("dd MMM yyyy")</td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="13" class="text-center">
+                                                <div class="text-center">
+                                                    <img src="/assets/images/nodata.png" class="nodataimg" />
+                                                    <br />
+                                                    <span class="text-nodata mt-2">No Data Found</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <button type="button" class="btn btn-sm btn-primary csv">Export CSV</button>
+                            <button type="button" class="btn btn-sm btn-primary sql">Export SQL</button>
+                            <button type="button" class="btn btn-sm btn-primary txt">Export TXT</button>
+                            <button type="button" class="btn btn-sm btn-primary json">Export JSON</button>
+                        </div>
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div> <!--end col-->
+        </div><!--end row-->
+    </div><!-- container -->
+    <!--end footer-->
+</div>

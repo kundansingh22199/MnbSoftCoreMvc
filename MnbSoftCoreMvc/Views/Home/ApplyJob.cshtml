@@ -1,0 +1,269 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Career";
+}
+<!-- Start main-content -->
+<style type="text/css">
+    .loading {
+        margin: 0px;
+        background-position: center center;
+        border: 1px dotted #000000;
+        z-index: 16000000;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+        background-color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 600;
+        color: #990000;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-color: black;
+        filter: alpha(opacity=10);
+        opacity: 0.5;
+        height: 100%;
+        background-image: url('../images/loading.gif');
+    }
+</style>
+<section class="contact-details fix section-padding section-bg pb-100 pt-0">
+
+    <div class="auto-container pt-0">
+        <div class="loading" style="display: none;" id="loading"></div>
+        <div class="mt-100">
+            <div class="row g-5">
+
+                <div class="col-lg-9 m-auto">
+                    <div class="row justify-content-center g-lg-4 g-md-3 g-2 align-items-end mb-40">
+                        <div class="col-lg-8 col-md-8">
+                            <div class="section-header text-center">
+                                <p> MNB Soft <span class="loc_div"></span> <span>Full Time</span></p>
+                                <h2 class="theme-clr4  wow fadeInUp">Sales Executives</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="page-breadcrumb wow fadeInUp animated " data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                        <li><a href="Index">Job listing</a></li>
+                        <li class="text-muted">Job details</li>
+                        <li class="text-muted">Job application</li>
+
+                    </ul>
+                    <div class="contact-box-style-3 partner-form">
+
+                        <h4 class="wow fadeInUp" data-wow-delay=".4s">Personal Details</h4>
+                        <form action="apply-job" method="post" enctype="multipart/form-data">
+                            <div class="row g-4">
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">First Name <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="text" name="firstName" class="form-control alpha-dot-only" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">Last Name <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="text" name="lastName" class="form-control alpha-dot-only" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">Email <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="email" name="email" class="form-control email-only" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">Contact  <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="text" name="mobile" class="form-control numeric-only" maxlength="10" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">Year of Graduation <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="text" name="yearOfGraduation" class="form-control numeric-only" maxlength="4" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">Gender <span class="text-danger">*</span></label>
+                                    <select class="mt-0" data-wow-delay=".4s" name="gender" id="Gender" required>
+                                        <option value="">--select--</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Not willing to discloseWebsite Owner">Not willing to disclose</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">Experience In Years<span class="text-danger">*</span></label>
+                                    <select class="mt-0" data-wow-delay=".4s" name="yearOfExperience" required>
+                                        <option value="">--select--</option>
+                                        <option value="Immediate">Fresher</option>
+                                        <option value="Not">0-1 Year</option>
+                                        <option value="Not">1-2 Years</option>
+                                        <option value="Not">2-3 Years</option>
+                                        <option value="Not">3-4 Years</option>
+                                        <option value="Not">4-5 Years</option>
+                                        <option value="Not">5-6 Years</option>
+                                        <option value="Not">6-7 Years</option>
+                                        <option value="Not">7-8 Years</option>
+                                        <option value="Not">8-9 Years</option>
+                                        <option value="Not">9-10 Years</option>
+                                        <option value="Not">10+ Years</option>
+                                        <option value="Not">12+ Years</option>
+                                        <option value="Not">15+ Years</option>
+
+
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="checkuot-form-cname">Current Employer <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="text" name="currentEmployer" class="form-control alpha-dot-comma-only" required>
+                                </div>
+
+
+
+
+                                <div class="col-sm-12">
+                                    <label for="checkuot-form-cname">Current CTC (In Lakhs Per Annum) <span class="text-danger">*</span></label>
+                                    <select class="mt-0" data-wow-delay=".4s" name="currentCtc" required>
+                                        <option value="-None-">-None-</option>
+                                        <option value="1-3">1-3</option>
+                                        <option value="3-5">3-5</option>
+                                        <option value="5-7">5-7</option>
+                                        <option value="7-9">7-9</option>
+                                        <option value="9-10">9-10</option>
+                                        <option value="10+">10+</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <label for="checkuot-form-cname">Expected CTC (In Lakhs Per Annum) <span class="text-danger">*</span></label>
+                                    <select class="mt-0" data-wow-delay=".4s" name="expectedCtc" required>
+                                        <option value="">-None-</option>
+                                        <option value="1-3">1-3</option>
+                                        <option value="3-5">3-5</option>
+                                        <option value="5-7">5-7</option>
+                                        <option value="7-9">7-9</option>
+                                        <option value="9-10">9-10</option>
+                                        <option value="10+">10+</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <label for="checkuot-form-cname">Notice Period<span class="text-danger">*</span></label>
+                                    <select class="mt-0" data-wow-delay=".4s" name="noticePeriod" required>
+                                        <option value="0">-None-</option>
+                                        <option value="Immediate">Immediate</option>
+                                        <option value="Not Aplicable">Not Aplicable</option>
+                                        <option value="1 Month">1 Month</option>
+                                        <option value="2 Months">2 Months</option>
+                                        <option value="3 Months">3 Months</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <label for="checkuot-form-cname">Skill Set  <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="text" name="skillSet" class="form-control alpha-dot-comma-only" required>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <label for="checkuot-form-cname">Upload Resume  <span class="text-danger">*</span></label>
+                                    <input id="checkuot-form-cname" type="file" name="uploadResume" class="form-control" placeholder="0-10" required>
+                                </div>
+                                <div class="col-sm-12" id="txtOtp" style="display:none">
+                                    <input name="otp" class="form-control numeric-only" maxlength="6" type="text" placeholder="OTP">
+                                </div>
+
+                            </div>
+                            <button type="button" class="theme-btn btn-style-one rounded-0 mt-20"><i class="me-2 fa-light fa-paper-plane"></i> Submit</button>
+                            <button type="submit" class="mt-20 theme-btn  btn-style-one wow fadeInUp" data-wow-delay=".8s" style="display:none">
+                                Submit Application
+                            </button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $(".theme-btn.btn-style-one[type='button']").click(function () {
+            var email = $("input[name='email']").val();
+            var fname = $("input[name='firstName']").val();
+            var lname = $("input[name='lastName']").val();
+            var name= fname +" "+lname
+            if (email === "") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Required',
+                    text: 'Please enter your email address.'
+                });
+                return;
+            }
+
+            $.ajax({
+                url: '/Home/sendOtp',
+                type: 'POST',
+                data: { email: email , name:name},
+                beforeSend: function () {
+                    $("#loading").show();
+                },
+                complete: function () {
+                    $("#loading").hide();
+                },
+                success: function (msg) {
+                    if (msg === "Ok") {
+                        $("#txtOtp").show();
+                        $("button[type='submit']").show();
+                        $("button[type='button']").hide();
+                        $("input[name='email']").prop("readonly", true);
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'OTP sent successfully to your email. Valid for 5 minutes.'
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: msg
+                        });
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Something went wrong. Please try again.'
+                    });
+                }
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        debugger
+        @if (TempData["Success"] != null)
+        {
+            <text>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: '@TempData["Success"]'
+            });
+            </text>
+        }
+        else if (TempData["Err"] != null)
+        {
+            <text>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '@TempData["Err"]'
+            });
+            </text>
+        }
+    });
+</script>

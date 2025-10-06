@@ -1,0 +1,910 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "About MNB Soft - A Premier Software Development Company.";
+    ViewData["description"] = "MNB Soft, a trusted software development company known for its outstanding solutions and innovative technology. Explore our services now.";
+    ViewData["robots"] = "index,follow";
+}
+
+<section class="hero-section hero-5 parallaxie bg-cover" style="background-image: url('/images/home-5/hero/hero-image2.jpg');" hidden>
+    <div class="banner-outer">
+        <div class="hero-content pt-100 pb-80">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="star">
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <i class="icon fa-solid fa-star"></i>
+                        <span class="star-title">Global Partner Ecosystem</span>
+                    </div>
+                    <h1 class="banner-title wow fadeInUp" data-wow-delay=".2s">Find an MNB Partner</h1>
+                    <p class="title text-white mt-20">Discover the right MNB Partner to unlock the full potential of our platform. Explore our comprehensive directory to connect with trusted partners who best match your business needs.</p>
+
+                    <div class="hero-button wow fadeInUp animated" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                        <a href="affiliate-form" class="theme-btn btn-style-one">
+                            Get started &nbsp;
+                            <span class="icon">
+                                <i class="lnr-icon-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="hero-box-items Commission-bg">
+            <div class="content-box wow fadeInUp" data-wow-delay=".3s">
+                <p class="fw-bold font-size-24">Global Network</p>
+                <p class="Commission">Explore partners across regions and industries.</p>
+            </div>
+            <div class="content-box wow fadeInUp" data-wow-delay=".5s">
+                <p class="fw-bold font-size-24">Trusted Experts</p>
+                <p class="Commission">Work with certified professionals you can rely on.</p>
+            </div>
+            <div class="content-box wow fadeInUp" data-wow-delay=".8s">
+                <p class="fw-bold font-size-24">Business Growth</p>
+                <p class="Commission">Unlock new opportunities with expert guidance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mail-adres-section section-bg" id="joblist" hidden>
+    <div class="container pt-80">
+
+        <div class="row justify-content-center g-lg-4 g-md-3 g-2 align-items-end mb-40">
+            <div class="col-lg-12 col-md-12 mt-0">
+                <div class="section-header  border-bottom pb-30 d-flex justify-content-between align-items-center gap-xxl-5 gap-xl-4 gap-3 ">
+                    <h2 class="theme-clr4 fw-bold wow fadeInUp animated">Global  <span class="fw-300">Partners.</span></h2>
+                    <div class="sidebar-service-list p-0">
+                        
+                      
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-0 country-list" >
+                                      
+                                    <select name="country" class="form-control" id="country">
+                                        <option value="">Select Country</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BA">Bosnia and Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="BN">Brunei</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo, Democratic Republic</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN" selected>India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KP">Korea, North</option>
+                                        <option value="KR">Korea, South</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Laos</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macau</option>
+                                        <option value="MK">North Macedonia</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia</option>
+                                        <option value="MD">Moldova</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar (Burma)</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russia</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="SS">South Sudan</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SZ">Eswatini</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syria</option>
+                                        <option value="TW">Taiwan</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TL">Timor-Leste</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VN">Vietnam</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select>
+
+                                    </div>
+                                </div>
+                            <div class="col-sm-6">
+                                <div class="mb-0">
+                                    <input class="form-control" type="text" placeholder="Search Company, Loaction">
+
+                                </div>
+                            </div>
+                                
+                               
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-xl-4 g-3">
+            <div class="col-sm-4 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay=".1s">
+                <div class="mail-address-items2 border-0">
+                    <div class="logo-area">
+                        <img src="https://mparchi.com/files/img/images/ebooklogo.png" />
+                    </div>
+                    <div class="parterndetails border-bottom mb-10">
+                        <h4 class="theme-clr4 pb-2">Hitech Services </h4>
+
+                        <ul class="part-details pb-20">
+                            <li class="p-detail zwc-cd-address"><i class="fa-solid fa-location-dot"></i><span class="zwc-state-field">Uttar Pradesh</span> India, <strong>(HQ) India</strong></li>
+                            <li class="p-detail zwc-cd-mailid"><i class="fa-solid fa-envelope"></i> <a href="mailto:hitechservices.620@gmail.com">hitechservices.620@gmail.com</a></li>
+                            <li class="p-detail zwc-cd-website"><i class="fa-solid fa-globe"></i><a href="https://www.hitechservices.com" target="_blank">www.hitechservices.com</a></li>
+                            <li class="p-detail zwc-cd-rating">
+                                <span class="zwc-rating-star-main">
+                                    <span class="zwc-star-rating" style="--ratingstar-width:96%;">&nbsp;</span>
+                                    <span class="zwc-avg-rating">4.8</span>
+                                    <span class="zwc-total-rating">( 62 ratings )</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=" d-flex justify-content-between align-items-center gap-xxl-5 gap-xl-4 gap-3">
+                        <p class="theme-clr4 d-flex">
+                            <img src="/images/premium-badge.png" style="max-width:150px;" />
+                        </p>
+
+                        <small class="theme-clr4 d-flex font-10">
+                            0.5 Years
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-sm-4 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay=".1s">
+                <div class="mail-address-items2 border-0">
+                    <div class="logo-area">
+                        <img src="https://mparchi.com/files/img/images/ebooklogo.png" />
+                    </div>
+                    <div class="parterndetails border-bottom mb-10">
+                        <h4 class="theme-clr4 pb-2">SUHANIEMPIRE PVT.LTD</h4>
+
+                        <ul class="part-details pb-20">
+                            <li class="p-detail zwc-cd-address"><i class="fa-solid fa-location-dot"></i><span class="zwc-state-field">Odisha</span> India, <strong>(HQ) India</strong></li>
+                            <li class="p-detail zwc-cd-mailid"><i class="fa-solid fa-envelope"></i> <a href="mailto:suhaniempire2023@gmail.com">suhaniempire2023@gmail.com</a></li>
+                            <li class="p-detail zwc-cd-website"><i class="fa-solid fa-globe"></i><a href="https://www.suhaniempire.com" target="_blank">www.suhaniempire.com</a></li>
+                            <li class="p-detail zwc-cd-rating">
+                                <span class="zwc-rating-star-main">
+                                    <span class="zwc-star-rating" style="--ratingstar-width:96%;">&nbsp;</span>
+                                    <span class="zwc-avg-rating">4.8</span>
+                                    <span class="zwc-total-rating">( 62 ratings )</span>
+                                </span>
+                            </li>
+                        </ul>
+</div>
+                    <div class=" d-flex justify-content-between align-items-center gap-xxl-5 gap-xl-4 gap-3">
+                        <p class="theme-clr4 d-flex">
+                            <img src="/images/premium-badge.png" style="max-width:150px;" />
+                        </p>
+
+                        <small class="theme-clr4 d-flex font-10">
+                            1.5 Years
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay=".1s">
+                <div class="mail-address-items2 border-0">
+                    <div class="logo-area">
+                        <img src="https://www.webvisionsoftech.com/assetsweb/images/logo.png" />
+                    </div>
+                    <div class="parterndetails border-bottom mb-10">
+                        <h4 class="theme-clr4 pb-2">WEBVISION SOFTECH PVT LTD</h4>
+
+                        <ul class="part-details pb-20">
+                            <li class="p-detail zwc-cd-address"><i class="fa-solid fa-location-dot"></i><span class="zwc-state-field">Maharashtra</span> India, <strong>(HQ) India</strong></li>
+                            <li class="p-detail zwc-cd-mailid"><i class="fa-solid fa-envelope"></i> <a href="mailto:info@webvisionsoftech.com">info@webvisionsoftech.com</a></li>
+                            <li class="p-detail zwc-cd-website"><i class="fa-solid fa-globe"></i><a href="https://www.webvisionsoftech.com" target="_blank">www.webvisionsoftech.com</a></li>
+                            <li class="p-detail zwc-cd-rating">
+                                <span class="zwc-rating-star-main">
+                                    <span class="zwc-star-rating" style="--ratingstar-width:96%;">&nbsp;</span>
+                                    <span class="zwc-avg-rating">4.8</span>
+                                    <span class="zwc-total-rating">( 62 ratings )</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=" d-flex justify-content-between align-items-center gap-xxl-5 gap-xl-4 gap-3">
+                        <p class="theme-clr4 d-flex">
+                            <img src="/images/premium-badge.png" style="max-width:150px;" />
+                        </p>
+
+                        <small class="theme-clr4 d-flex font-10">
+                            0.5 Years
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay=".1s">
+                <div class="mail-address-items2 border-0">
+                    <div class="logo-area">
+                        <img src="https://mparchi.com/files/img/images/ebooklogo.png" />
+                    </div>
+                    <div class="parterndetails border-bottom mb-10">
+                        <h4 class="theme-clr4 pb-2">Innovative Software Solutions</h4>
+
+                        <ul class="part-details pb-20">
+                            <li class="p-detail zwc-cd-address"><i class="fa-solid fa-location-dot"></i><span class="zwc-state-field">Uttar Pradesh</span> India, <strong>(HQ) India</strong></li>
+                            <li class="p-detail zwc-cd-mailid"><i class="fa-solid fa-envelope"></i> <a href="mailto:manojteotia31@yahoo.co.in">manojteotia31@yahoo.co.in</a></li>
+                            <li class="p-detail zwc-cd-website"><i class="fa-solid fa-globe"></i><a href="https://www.innovativesoftwaresolutions.com" target="_blank">innovativesoftwaresolutions.com</a></li>
+                            <li class="p-detail zwc-cd-rating">
+                                <span class="zwc-rating-star-main">
+                                    <span class="zwc-star-rating" style="--ratingstar-width:96%;">&nbsp;</span>
+                                    <span class="zwc-avg-rating">4.8</span>
+                                    <span class="zwc-total-rating">( 62 ratings )</span>
+                                </span>
+                            </li>
+                        </ul>
+</div>
+                    <div class=" d-flex justify-content-between align-items-center gap-xxl-5 gap-xl-4 gap-3">
+                        <p class="theme-clr4 d-flex">
+                            <img src="/images/premium-badge.png" style="max-width:150px;" />
+                        </p>
+
+                        <small class="theme-clr4 d-flex font-10">
+                          03 Years                        </small>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<!-- Start main-content -->
+<section class="page-title" style="background-image: url(/images/inner/page-title-bg.jpg);">
+    <div class="auto-container">
+        <div class="title-outer">
+            <ul class="page-breadcrumb wow fadeInUp" data-wow-delay=".3s">
+                <li><a href="Index">Home</a></li>
+                <li>About Us</li>
+            </ul>
+            <h1 class="title wow fadeInUp" data-wow-delay=".5s">About Us</h1>
+        </div>
+    </div>
+</section>
+
+<!--About Section -->
+<!--About Section -->
+<section class="about-section fix section-padding">
+    <div class="auto-container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="image-column-3">
+                    <div class="inner-column">
+                        <div class="image1 overlay-anim wow fadeInUp" data-wow-delay=".3s">
+                            <img src="~/images/home-3/about/about-01.jpg" alt="Image">
+                        </div>
+                        <div class="info float-bob-x">
+                            <img src="~/images/about-info.png" alt="Image">
+                        </div>
+                        <div class="image2 wow fadeInUp" data-wow-delay=".5s">
+                            <img src="~/images/home-3/about/about-02.jpg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content-3">
+                    <div class="sec-title mb-0">
+                        <h6 class="sub-title wow fadeInUp">
+                            <span class="triangle triangle1"></span>
+                            <span class="triangle triangle2"></span>
+                            Our Company's About Details.
+                        </h6>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Fueled by Passion, Driven by Commitment </h2>
+                    </div>
+                    <p class="about-text wow fadeInUp" data-wow-delay=".4s">
+                        MNB was founded on pillars of passion by visionary engineers who having had rich experience in the IT industry decided to help clients grow their business and improve sales,
+
+                        Our proven digital marketing strategies have delivered disruptive growth to a number of clients through multichannel proficiencies in digital realms solving all their problems in dealing with digital marketing.
+                        You can most certainly be the next.
+                    </p>
+                    <div class="about-block wow fadeInUp" data-wow-delay=".6s">
+                        <div class="inner-box">
+                            <div class="icon">
+                                <i class="flaticon-finance-creativity-1-1"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Timeliness</h4>
+                                <p class="text">We deliver in committed timelines, we understand the value of time and our team believes in agility. Our team adopts a proactive approach in delivery business solutions. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-block wow fadeInUp" data-wow-delay=".8s">
+                        <div class="inner-box">
+                            <div class="icon">
+                                <i class="flaticon-finance-edit-tools-1"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Transparency</h4>
+                                <p class="text">Our pricing and resource place is transparent. We never deliver half-baked ideas and we work on concrete plans that are result-oriented. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info mt-50 wow fadeInUp" data-wow-delay=".2s">
+                        <a href="page-contact.html" class="theme-btn btn-style-one wow fadeInUp" data-wow-delay=".5s">
+                            Lets Talk With Us
+                            <span class="icon"><i class="flaticon-finance-arrow-right-svgrepo-com1-2"></i></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Counter Section Start -->
+<section class="counter-section section-padding pt-0">
+    <div class="auto-container">
+        <div class="counter-wrapper">
+            <div class="counter-box-one wow bounceInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="count-box">
+                    <h2><span class="count-text" data-speed="3000" data-stop="200">0</span>k</h2>
+                    <p>Worldwide business Grow</p>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="counter-box-one wow bounceInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="count-box">
+                    <h2><span class="count-text" data-speed="3000" data-stop="5">0</span>K+</h2>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="counter-box-one wow bounceInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <div class="count-box">
+                    <h2><span class="count-text" data-speed="3000" data-stop="10">0</span>+</h2>
+                    <p>Countries Served</p>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="counter-box-one wow bounceInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <div class="count-box">
+                    <h2><span class="count-text" data-speed="3000" data-stop="5">0</span></h2>
+                    <p>Award winning contest</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Section Start -->
+<section class="service-section-four pb-90">
+    <div class="service-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="sec-title mb-40">
+                        <h6 class="sub-title wow fadeInUp">
+                            <span class="triangle triangle1"></span>
+                            <span class="triangle triangle2"></span>
+                            Our Services
+                        </h6>
+                        <h2 class="title wow fadeInUp mb-20" data-wow-delay=".2s">What We Do</h2>
+                        <p class="mb-30">As a <strong>product-based IT company</strong>, we design, develop, and deliver innovative software solutions tailored for diverse industries. Our portfolio includes:</p>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="service-block-four">
+                        <div class="icon">
+                            <i class="flaticon-business-054-graph"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Enterprise Software Products</h3>
+                            <p class="text">Scalable platforms to streamline operations and improve decision-making.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="service-block-four">
+                        <div class="icon">
+                            <i class="flaticon-business-013-idea"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">SaaS Solutions</h3>
+                            <p class="text">Cloud-based applications offering flexibility, cost-efficiency, and accessibility from anywhere.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="service-block-four">
+                        <div class="icon">
+                            <i class="flaticon-business-011-dollar"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Automation Tools</h3>
+                            <p class="text">Smart systems that reduce repetitive tasks and improve productivity.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="service-block-four">
+                        <div class="icon">
+                            <i class="flaticon-business-030-settings"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Custom Product Development</h3>
+                            <p class="text">Tailor-made solutions designed around your unique business requirements.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                    <div class="service-block-four">
+                        <div class="icon">
+                            <i class="flaticon-business-057-file"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Cybersecurity Solutions</h3>
+                            <p class="text">Protecting your business with advanced threat detection and prevention technologies.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="why-choose-section fix section-bg-2">
+    <div class="shape-1 bounce-y"><img src="~/images/home-5/shape/shape-image-1.png" alt=""></div>
+    <div class="auto-container">
+        <div class="why-choose-us-wrapper">
+            <div class="row g-4 align-items-center">
+                <div class="col-xl-5">
+                    <div class="why-choose-us-image-1">
+                        <img src="~/images/choose-us.jpg" alt="img" class="wow img-custom-anim-left">
+                        <div class="icon-box-items">
+                            <div class="icon">
+                                <i class="flaticon-finance-award-svgrepo-com-1"></i>
+                            </div>
+                            <h3>
+                                Best Business
+                                Consulting
+                                Awards
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="why-choose-us-content-1">
+                        <div class="sec-title mb-0">
+                            <h6 class="sub-title light">
+                                <span class="triangle triangle1"></span>
+                                <span class="triangle triangle2"></span>
+                                Why Choose Us?
+                            </h6>
+                            <h2 class="title light wow fadeInUp" data-wow-delay=".2s">Discover why choosing us is your best decision.</h2>
+                        </div>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="#Mission" data-bs-toggle="tab" class="nav-link active">
+                                    Our Mission
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#Vision" data-bs-toggle="tab" class="nav-link">
+                                    Our Vision
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#Philosophy" data-bs-toggle="tab" class="nav-link">
+                                    Our Core Values
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#Acchievment" data-bs-toggle="tab" class="nav-link">
+                                    Our Focus
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content light">
+                            <div id="Mission" class="tab-pane fade show active">
+                                <div class="why-choose-list wow fadeInUp" data-wow-delay=".3s">
+                                    <h3>Our Mission</h3>
+                                    <p>
+                                        Providing our clients with innovative and cost-effective solutions to help them achieve their business goals. Striving to build long-lasting relationships with our clients with our exceptional customer service and support. Helping our clients succeed by providing them with the tools and resources they need to grow and thrive in their respective industries.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div id="Vision" class="tab-pane fade">
+                                <div class="why-choose-list">
+                                    <h3>Our Vision</h3>
+                                    <p>To become a global leader in innovative, product-based IT solutions that empower businesses to thrive in a digital-first world.</p>
+                                    <p>We envision a future where our technology not only meets today’s demands but anticipates tomorrow’s challenges, helping organizations adapt, grow, and succeed with confidence.</p>
+                                </div>
+
+                            </div>
+                            <div id="Philosophy" class="tab-pane fade">
+                                <div class="why-choose-list">
+                                    <h3>Our Core Values </h3>
+                                    <p>
+                                        We believe that in the success of our customers alone lies our success. We are in the habit of walking the extra mile to ensure our clients receive the best value for their investments. We take great pride in the quality of our attention to detail work and exceptional customer service.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div id="Acchievment" class="tab-pane fade">
+                                <div class="why-choose-list">
+                                    <h3> Our Focus </h3>
+                                    <p>
+                                        Being a customer-centric enterprise, our focus always stays fixed on providing our clients with top-notch products and services with a high level of professionalism and commitment. We collaborate closely with our clients to understand their needs and demands, and we constantly seek solutions that exceed their expectations.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="how-it-work-section fix section-padding gray-bg">
+    <div class="auto-container">
+        <div class="sec-title text-center mb-60">
+            <h6 class="sub-title wow fadeInUp">
+                <span class="triangle triangle1"></span>
+                <span class="triangle triangle2"></span>
+                Why Choose Us?
+            </h6>
+            <h2 class="title wow fadeInUp" data-wow-delay=".2s">In a crowded tech market, here’s why our clients trust us</h2>
+        </div>
+        <div class="how-it-work-wrapper border-none">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="how-it-work-items-style-3 style-2">
+                        <h3 class="number">01</h3>
+                        <h4 class="title">Product Excellence</h4>
+                        <p class="text">We maintain strict quality standards to ensure every product performs reliably under real-world conditions.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="how-it-work-items-style-3 style-2">
+                        <h3 class="number">02</h3>
+                        <h4 class="title">Innovation at the Core</h4>
+                        <p class="text">We invest in R&D to integrate AI, IoT, blockchain, and other emerging technologies into our solutions.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="how-it-work-items-style-3 style-2">
+                        <h3 class="number">03</h3>
+                        <h4 class="title">User-Centric Design</h4>
+                        <p class="text">Our products are built with the end-user in mind, ensuring a seamless experience.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="how-it-work-items-style-3 style-2">
+                        <h3 class="number">04</h3>
+                        <h4 class="title">Scalable & Future-Ready</h4>
+                        <p class="text">
+                            Whether you’re a startup or a global enterprise, our products grow with your business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="how-sec-text mt-20 wow fadeInUp" data-wow-delay=".3s"> Here are just a few reasons why we’re the best choice for you: <a href="contact-us.html">Consult Now</a></h5>
+    </div>
+</section>
+<!-- Service Section Start -->
+<section class="testimonial-section fix section-padding">
+    <div class="auto-container">
+        <div class="testimonial-wrapper bg-cover" style="background-image: url(~/images/home-1/testimonial/testimonial-bg.png);">
+            <div class="sec-title text-center">
+                <h6 class="sub-title wow fadeInUp">
+                    <span class="triangle triangle1"></span>
+                    <span class="triangle triangle2"></span>
+                    Testimonials
+                </h6>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                    What our top Customers <br> Say About us
+                </h2>
+            </div>
+            <div class="swiper testimonial-slider fix">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-box-items">
+                            <div class="client-info-items">
+                                <div class="client-image">
+                                    <img src="~/images/home-1/testimonial/client-01.png" loading="lazy" alt="img" />
+                                    <div class="quote-icon">
+                                        <i class="lnr-icon-quote"></i>
+                                    </div>
+                                </div>
+                                <div class="client-content">
+                                    <h5>Manoj Kumar</h5>
+                                    <span>CEO & Founder</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>A genuinely useful suite of business management software worth every penny. I personally recommend to all MSMEs like mine.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-box-items">
+                            <div class="client-info-items">
+                                <div class="client-image">
+                                    <img src="~/images/client3.png" loading="lazy" alt="img" />
+                                    <div class="quote-icon">
+                                        <i class="lnr-icon-quote"></i>
+                                    </div>
+                                </div>
+                                <div class="client-content">
+                                    <h5>Akhilesh Shrivastav</h5>
+                                    <span>Founder of Jaspe Perfume</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>A wonderful step and must say the need if the hour. With a team of dedicated professionals they're providing excellent services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-box-items">
+                            <div class="client-info-items">
+                                <div class="client-image">
+                                    <img src="~/images/client2.png" loading="lazy" alt="img" />
+                                    <div class="quote-icon">
+                                        <i class="lnr-icon-quote"></i>
+                                    </div>
+                                </div>
+                                <div class="client-content">
+                                    <h5>Ashok Sharma</h5>
+                                    <span>manager at Oman</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>Vry nyc business management software, reduced a lot of workload of my team, user friendy, full value of money.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-box-items">
+                            <div class="client-info-items">
+                                <div class="client-image">
+                                    <img src="~/images/client1.png" loading="lazy" alt="img" />
+                                    <div class="quote-icon">
+                                        <i class="lnr-icon-quote"></i>
+                                    </div>
+                                </div>
+                                <div class="client-content">
+                                    <h5>MI. AHMAD</h5>
+                                    <span>NV Shoppe Founder</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>Highly Recommend MNB Soft Solutions! Their team is highly professional, skilled, and dedicated to providing customized solutions tailored to meet client needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-dot mt-5 mb-0">
+                    <div class="dot2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,145 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Profile";
+}
+@{
+    var row = ViewBag.ProfileRow as System.Data.DataRow;
+}
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header border-0 flex-wrap align-items-start">
+                        <div class="row d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
+                                <div class="d-flex align-items-center flex-row flex-wrap">
+                                    <div class="position-relative me-3">
+                                        <!-- Profile Image -->
+                                        <img id="profileImage" src="~/assets/images/users/avatar-7.jpg" alt="Profile" height="120" class="rounded-circle">
+
+                                    </div>
+                                    <div class="">
+                                        <h5 class="fw-semibold fs-22 mb-1"></h5>
+                                        <p class="mb-0 text-muted fw-medium"></p>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <h4 class="card-title">Description</h4>
+                        <form method="post" action="/Home/Profile">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6">
+                                    <ul class="list-style-1">
+                                        <li>
+                                            <label class="custom-label-2 mb-0">Name</label>
+                                            <input name="name" class="form-control alfa-numeric-only"
+                                                   value="@row?["name"]" readonly />
+                                        </li>
+                                        <li>
+                                            <label class="custom-label-2 mb-0">Mobile :</label>
+                                            <input name="mobile" class="form-control" value="@row?["mobile"]" readonly />
+                                        </li>
+                                        <li>
+                                            <label class="custom-label-2 mb-0">Email</label>
+                                            <input name="email" class="form-control" value="@row?["email"]" readonly />
+                                        </li>
+                                        <li>
+                                            <label class="custom-label-2 mb-0">Status :</label>
+                                            <input name="status" class="form-control"
+                                                   value="@(Convert.ToInt32(row?["status"] ?? 0) == 1 ? "Active" : "Inactive")"
+                                                   readonly />
+                                        </li>
+                                        <li>
+                                            <label class="custom-label-2 mb-0">Password :</label>
+                                            <input name="password" type="password"
+                                                   value="@row?["password"]" class="form-control" readonly />
+                                        </li>
+                                        <li>
+                                            <label class="custom-label-2 mb-0">Create Date :</label>
+                                            <input name="createDate" class="form-control"
+                                                   value="@string.Format("{0:dd-MMM-yyyy HH:mm}", row?["createDate"])" readonly />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--end row-->
+    </div><!-- container -->
+    <!--Start Rightbar-->
+    <!--Start Rightbar/offcanvas-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+            <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+            <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h6>Account Settings</h6>
+            <div class="p-2 text-start mt-3">
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch1">
+                    <label class="form-check-label" for="settings-switch1">Auto updates</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch2" checked="">
+                    <label class="form-check-label" for="settings-switch2">Location Permission</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="settings-switch3">
+                    <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+                </div><!--end form-switch-->
+            </div><!--end /div-->
+            <h6>General Settings</h6>
+            <div class="p-2 text-start mt-3">
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch4">
+                    <label class="form-check-label" for="settings-switch4">Show me Online</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch5" checked="">
+                    <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="settings-switch6">
+                    <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+                </div><!--end form-switch-->
+            </div><!--end /div-->
+        </div><!--end offcanvas-body-->
+    </div>
+    <!--end Rightbar/offcanvas-->
+    <!--end Rightbar-->
+    <!--Start Footer-->
+
+    <footer class="footer text-center text-sm-start d-print-none">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-0 rounded-bottom-0">
+                        <div class="card-body">
+                            <p class="text-muted mb-0">
+                                ©
+                                <script>document.write(new Date().getFullYear())</script>2025
+                                MNB Soft Solution
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--end footer-->
+</div>

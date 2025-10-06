@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cgi-bin/
+Allow: /
+
+
+Sitemap: https://mnbsoft.com/sitemap.xml

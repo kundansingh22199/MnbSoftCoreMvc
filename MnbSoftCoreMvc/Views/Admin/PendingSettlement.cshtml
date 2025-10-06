@@ -1,0 +1,156 @@
+﻿@model List<BusinessEntity.ModSettlement>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Pending Settlement";
+}
+<!-- Page Content-->
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-h-100">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h4 class="card-title">Pending Settlement Report</h4>
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </div>
+                    <!--end card-header-->
+                    <div class="card-body pt-0">
+                        <div class="table-responsive browser_users">
+                            <table class="table mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th class="border-top-0">Sr No.</th>
+                                        <th class="border-top-0">Partner Code</th>
+                                        <th class="border-top-0">Total Amount </th>
+                                        <th class="border-top-0">Total Commission</th>
+                                        <th class="border-top-0">Payable Amount</th>
+                                        <th class="border-top-0">Net Payable Amount</th>
+                                        <th class="border-top-0">TDS(%)</th>
+                                        <th class="border-top-0">TDS Amount</th>
+                                        <th class="border-top-0">Wallet Amount</th>
+                                        <th class="border-top-0">UTR NO</th>
+                                        <th class="border-top-0">Status</th>
+                                        <th class="border-top-0">Date</th>
+                                        <th class="border-top-0">Action</th>
+
+                                    </tr>
+                                    <!--end tr-->
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        int i = 1;
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@(i++)</td>
+                                                <td>
+                                                    <form asp-action="SettlementDetails" asp-controller="Admin" method="post" style="display:inline;">
+                                                        <input type="hidden" name="selectedIds" value="@item.selectedIds" />
+                                                        <button type="submit" class="btn btn-primary btn-sm">@item.partnerCode</button>
+                                                    </form>
+                                                </td>
+                                                <td>@item.totalAmount</td>
+                                                <td>@item.totalCommission</td>
+                                                <td>@item.payableAmount</td>
+                                                <td>@item.netPayableAmount </td>
+                                                <td>@item.tdsPer % </td>
+                                                <td>@item.tdsAmount </td>
+                                                <td>@item.walletUsed </td>
+                                                <td>@item.utrNo </td>
+                                                <td class="">
+                                                    <span class="btn btn-sm px-2 align-middle @(item.status == 0 ? "badge bg-warning-subtle text-warning" : item.status == 1 ? "badge bg-primary-subtle text-primary" : "badge bg-danger-subtle text-danger")">
+                                                        @(item.status == 0 ? "Pending" : item.status == 1 ? "Approved" : "Rejected")
+                                                    </span>
+                                                </td>
+                                                <td>@item.createdDate.ToString("dd MMM yyyy")</td>
+                                                <td class="d-flex">
+                                                    <form asp-action="UpdateSattlement" asp-controller="Admin" method="post" class="settlement-form" style="display:inline;">
+                                                        <input type="hidden" name="selectedIds" value="@item.selectedIds" />
+                                                        <input type="hidden" name="id" value="@item.id" />
+                                                        <input type="hidden" name="status" value="1" />
+                                                        <button type="button" class="btn btn-primary btn-sm btn-approve">Approve</button>
+                                                    </form>
+                                                    <form asp-action="UpdateSattlement" asp-controller="Admin" method="post" class="settlement-form" style="display:inline;">
+                                                        <input type="hidden" name="selectedIds" value="@item.selectedIds" />
+                                                        <input type="hidden" name="id" value="@item.id" />
+                                                        <input type="hidden" name="status" value="2" />
+                                                        <button type="button" class="btn btn-danger btn-sm btn-reject">Reject</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="13" class="text-center">
+                                                <div class="text-center">
+                                                    <img src="/assets/images/nodata.png" class="nodataimg" />
+                                                    <br />
+                                                    <span class="text-nodata mt-2">No Data Found</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                    <!--end tr-->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--end /div-->
+                    </div>
+                    <!--end card-body-->
+                </div>
+                <!--end card-->
+            </div>
+            <!--end col-->
+            <!--end col-->
+        </div>
+
+
+    </div><!-- container -->
+    <!--end footer-->
+</div>
+<script>
+    $(document).ready(function () {
+        $(".btn-approve").click(function () {
+            let form = $(this).closest("form");
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You want to approve this settlement!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Approve'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+
+        $(".btn-reject").click(function () {
+            let form = $(this).closest("form");
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You want to reject this settlement!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Reject'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+    });
+</script>

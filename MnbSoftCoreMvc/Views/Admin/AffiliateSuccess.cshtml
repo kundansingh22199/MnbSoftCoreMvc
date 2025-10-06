@@ -1,0 +1,89 @@
+﻿@model BusinessEntity.ModAffiliate
+@{
+    Layout = null;
+    ViewData["Title"] = "Affiliate Success";
+}
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body pt-0">
+                        <section class="contact-details fix section-padding section-bg pb-100">
+
+                            <div class="auto-container">
+
+                                <div class="">
+                                    <div class="row g-5">
+                                        <div class="col-lg-6 content-column p-0">
+                                            <div class="inner-column">
+                                                <img src="/images/contact-us.png" />
+
+                                                <div class="cont d-flex justify-content-between align-items-center gap-xxl-5 gap-xl-4 gap-3 wow fadeInUp" data-wow-delay=".4s">
+                                                    <div class="">
+                                                        <h4 class="theme-clr4">Let’s Connect</h4>
+                                                        <span class="fz-14 theme-clr4 d-block">
+
+                                                            Have a question or an idea? We’re just a message away.
+                                                            Reach out for support, collaborations, or project discussions.
+                                                        </span>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 content-column p-0">
+                                            <div class="inner-column right-column">
+                                                <div class="sec-title mb-20">
+
+                                                    <h2 class="wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                                        Affiliate Approved Successful!
+                                                    </h2>
+                                                    <h4 class="wow fadeInUp animated mt-10">Welcome to the MNB Become a Partner Network</h4>
+                                                    <p class="text wow fadeInUp mt-2 mb-20">Thank you for registering with <strong>MNB Become a Affiliate Partner</strong>. Your application has been approved successfully, and you are now one step closer to becoming a valued partner in our growth journey.</p>
+
+                                                    <h4 class="wow fadeInUp animated">What Happens Next?</h4>
+                                                    <ul class="success-point mb-20">
+                                                        <li>Our team will review your details carefully.</li>
+                                                        <li>You will receive a confirmation email with your registration information.</li>
+                                                        <li>Once approved, you’ll gain access to your <strong class="fw-500">Affiliate Partner Dashboard</strong>, tools, and resources</li>
+                                                    </ul>
+
+
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            Name
+                                                            <span class="text-secondary ">@Model.firstName @Model.lastName</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            Email
+                                                            <span class="text-success"> @Model.email</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            Password
+                                                            <span class="text-success">  @Model.password</span>
+                                                        </li>
+                                                    </ul>
+
+                                                    <a href="/Admin/Dashboard" class="theme-btn btn-style-one mt-2">
+                                                        Back to Home Page
+                                                        <span class="icon">
+                                                            <i class="lnr-icon-arrow-right"></i>
+                                                        </span>
+                                                    </a>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div> <!--end col-->
+        </div><!--end row-->
+    </div><!-- container -->

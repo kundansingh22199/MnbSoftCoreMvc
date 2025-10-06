@@ -1,0 +1,225 @@
+﻿@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-startbar="dark" data-bs-theme="light">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="" name="author" />
+    <title>Affiliate Login - Access Your Account with MNBsoft </title>
+    <meta name="description" content="Easily sign in to your affiliate partner account at MNBSoft to manage your partnership and access exclusive resources. Sign in now" />
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            background: url(/images/login-bg.jpg);
+            background-size: 100%;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .logo-login {
+            flex: 1 1 0%;
+            /* height: calc(100% - 74px); */
+            display: flex;
+            padding-left: 48px;
+            padding-bottom: 40px;
+            flex-direction: column;
+        }
+
+        .login-logo {
+            position: fixed;
+            top: 64px;
+            /*  left: 48px; */
+        }
+
+        .body-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .body-text {
+            width: 604px;
+        }
+
+        .boxbig {
+            flex: 1 1 0%;
+        }
+
+
+        .login-form {
+            padding: 0px 12px;
+            height: calc(100% - 74px);
+            max-width: 520px;
+        }
+
+        .agree {
+            margin-top: 80px;
+            margin-bottom: 0px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @@media (max-width: 600px) {
+            .hiddem-xs {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+
+<!-- Top Bar Start -->
+<body>
+    <div class="container-xxl">
+        <div class="row vh-100 d-flex justify-content-center">
+            <div class="col-12 align-self-center">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-8 logo-login hiddem-xs">
+
+                            <div class="boxbig"></div>
+                            <div class="login-logo"><img width="130" alt="razorpay Logo" class="sc-kAyceB hPOHnW" src="/assets/images/logo-light.png"></div>
+
+
+                            <div class="body-text">
+                                <div class="">
+                                    <h3 class="text-white">Welcome to the <span class="fw-bold">MNB Soft Affiliate Partner Portal</span>. Securely log in to manage your partnership, track opportunities, and grow your business with us.</h3>
+                                </div>
+                                <div class="d-flex text-white">
+                                    <div class="">
+                                        <h6 class="">
+                                            Access exclusive affiliate partner resources.
+
+
+                                        </h6>
+                                    </div>
+                                    <div class="mx-2">
+                                        <h6 class="">
+                                            Manage leads, deals, and commissions.
+
+
+                                        </h6>
+                                    </div>
+                                    <br />
+                                    <div class="">
+                                        <h6 class="">Track performance in real time.</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-lg-4 login-form">
+                            <div class="card">
+                                <div class="card-body p-0 bg-login auth-header-box rounded-top">
+                                    <div class="text-center p-3">
+                                        <a href="Index" class="logo logo-admin">
+                                            <img src="/assets/images/logo-light.png" height="50" alt="logo" class="auth-logo">
+                                        </a>
+                                        <h4 class="mt-3 mb-1 fw-semibold text-white fs-18">Let's Get Started MNB</h4>
+                                        @* <p class="text-muted fw-medium mb-0">Sign in to continue to Partner Panel.</p> *@
+                                    </div>
+                                </div>
+                                <div class="card-body pt-0">
+
+
+
+                                    <form class="my-4 mb-2" action="affiliate-login" method="post">
+                                        <div class="form-group mb-2">
+                                            <label class="form-label" for="username">Email</label>
+                                            <input type="email" class="form-control" id="username" name="email" value="@Context.Request.Cookies["email"]" placeholder="Enter username">
+                                        </div><!--end form-group-->
+
+                                        <div class="form-group">
+                                            <label class="form-label" for="userpassword">Password</label>
+                                            <input type="password" class="form-control" name="password" id="userpassword" value="@Context.Request.Cookies["password"]" placeholder="Enter password">
+                                        </div><!--end form-group-->
+
+                                        <div class="form-group row mt-3">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-success">
+                                                    <input type="checkbox" id="" name="rememberMe" value="true" class="form-check-input" @(Context.Request.Cookies["email"] != null ? "checked" : "") />
+                                                    <label class="form-check-label" for="customSwitchSuccess">Remember me</label>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-sm-6 text-end">
+                                                <a href="forgot-password" class="text-muted font-13"><i class="dripicons-lock"></i> Forgot password?</a>
+                                            </div><!--end col-->
+                                        </div><!--end form-group-->
+
+                                        <div class="form-group mb-0 row">
+                                            <div class="col-12">
+                                                <div class="d-grid mt-3">
+                                                    <button type="submit" class="btn btn-primary">Log In <i class="fas fa-sign-in-alt ms-1"></i></button>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div> <!--end form-group-->
+                                    </form><!--end form-->
+
+                                    <div class="text-center">
+                                        <p class="text-muted">Not a partner yet? <a href="affiliate-form" class="text-primary ms-1">Become a Affiliate Partner</a></p>
+                                    </div>
+
+                                    <p class="text-muted agree ">By continuing you agree to our <a href="privacy-policy" target="_blank"><span><span class="text-purple"> privacy policy </span></span></a> and <a href="terms-of-service" target="_blank"><span><span class="text-purple"> terms of Service </span></span></a></p>
+
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end card-body-->
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!-- container -->
+</body>
+<!--end body-->
+</html>
+
+<!-- Page Contact area end here -->
+<script>
+    $(document).ready(function () {
+        debugger
+        @if (TempData["Success"] != null)
+        {
+                        <text>
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: '@TempData["Success"]'
+                        });
+                        </text>
+        }
+        else if (TempData["Err"] != null)
+        {
+                        <text>
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: '@TempData["Err"]'
+                        });
+                        </text>
+        }
+    });
+</script>

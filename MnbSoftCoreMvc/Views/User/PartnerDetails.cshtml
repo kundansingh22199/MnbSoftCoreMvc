@@ -1,0 +1,175 @@
+﻿@model BusinessEntity.ModPartner
+@{
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+    ViewData["Title"] = "Partner Details";
+}
+
+
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header border-0 flex-wrap align-items-start">
+                        <div class="row d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
+                                <div class="d-flex align-items-center flex-row flex-wrap">
+                                    <div class="position-relative me-3">
+                                        <img id="profileImage" src="@(string.IsNullOrEmpty(Model?.profileImage) ? "/assets/images/users/avatar-7.jpg" : Model.profileImage)" alt="Profile" height="120" class="rounded-circle">
+                                        <a href="#" class="thumb-md justify-content-center d-flex align-items-center bg-primary text-white rounded-circle position-absolute end-0 bottom-0 border border-3 border-card-bg">
+                                            <i class="fas fa-camera"></i>
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="fw-semibold fs-22 mb-1">@Model.fullName</h5>
+                                        <p class="mb-0 text-muted fw-medium">(@Model.partnerCode)</p>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+
+                           
+                           
+                        </div>
+                       
+                        
+                    </div>
+                    <div class="card-body pt-0">
+                        <h4 class="card-title">Description</h4>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <ul class="list-style-1">
+                                    <li><label class="custom-label-2 mb-0">Full Name :</label>@Model.fullName</li>
+                                    <li><label class="custom-label-2 mb-0">Email :</label>@Model.businessEmail</li>
+                                    <li><label class="custom-label-2 mb-0">Website :</label>@Model.companyWebsite</li>
+                                    <li><label class="custom-label-2 mb-0">Contact No :</label>@Model.mobile</li>
+                                    <li><label class="custom-label-2 mb-0">Country :</label>@Model.country</li>
+                                    <li><label class="custom-label-2 mb-0">State :</label>@Model.state</li>
+                                    <li><label class="custom-label-2 mb-0">City :</label>@Model.city</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <ul class="list-style-1">
+                                    <li><label class="custom-label-2 mb-0">Company :</label>@Model.company</li>
+                                    <li><label class="custom-label-2 mb-0">Address :</label>@Model.address</li>
+                                    <li><label class="custom-label-2 mb-0">Office Branch</label>@Model.branchOfficeLocation</li>
+                                    <li><label class="custom-label-2 mb-0">Team Size :</label>@Model.teamSize</li>
+                                    <li><label class="custom-label-2 mb-0">Why Become Reseller :</label>@Model.whyBecomeReseller</li>
+                                    <li><label class="custom-label-2 mb-0">Joining Date :</label>@Model.createDate.ToString("dd MMM yyyy hh:mm:ss")</li>
+                                    <li><label class="custom-label-2 mb-0">Account Status :</label>@(Model.status == 1 ? "Active" : "Inactive") </li>
+                                   
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="mb-md-2 mb-3 exp-del">
+                            <span class="d-block mb-1"><i class="fas fa-circle me-2 op4"></i>Currently Working at  <strong>@Model.company</strong></span>
+                            @{
+                                var createDate = Model.createDate;
+                                var today = DateTime.Now;
+
+                                int years = today.Year - createDate.Year;
+                                int months = today.Month - createDate.Month;
+                                int days = today.Day - createDate.Day;
+
+                                // Adjust if months or days are negative
+                                if (days < 0)
+                                {
+                                    months--;
+                                    days += DateTime.DaysInMonth(createDate.Year, createDate.Month);
+                                }
+                                if (months < 0)
+                                {
+                                    years--;
+                                    months += 12;
+                                }
+                            }
+                            <span>
+                                <i class="fas fa-circle me-2 op4"></i>
+                                @years Yrs @months Months @days Days Of Partner with <strong>MNB Soft Solution Pvt Ltd</strong>
+                            </span>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" class="btn btn-primary btn-sm me-2 mb-1"><i class="fas fa-download me-2"></i>Edit</a>
+                            <a href="javascript:void(0);" class="btn btn-warning btn-sm me-2 mb-1"><i class="fas fa-share-alt me-2"></i>Share Profile</a>
+                            <a href="javascript:void(0);" class="btn btn-info btn-sm me-2 mb-1"><i class="fas fa-phone-alt me-2"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+       
+
+        <!--end row-->
+    </div><!-- container -->
+    <!--Start Rightbar-->
+    <!--Start Rightbar/offcanvas-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+            <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+            <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h6>Account Settings</h6>
+            <div class="p-2 text-start mt-3">
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch1">
+                    <label class="form-check-label" for="settings-switch1">Auto updates</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch2" checked="">
+                    <label class="form-check-label" for="settings-switch2">Location Permission</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="settings-switch3">
+                    <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+                </div><!--end form-switch-->
+            </div><!--end /div-->
+            <h6>General Settings</h6>
+            <div class="p-2 text-start mt-3">
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch4">
+                    <label class="form-check-label" for="settings-switch4">Show me Online</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="settings-switch5" checked="">
+                    <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+                </div><!--end form-switch-->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="settings-switch6">
+                    <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+                </div><!--end form-switch-->
+            </div><!--end /div-->
+        </div><!--end offcanvas-body-->
+    </div>
+    <!--end Rightbar/offcanvas-->
+    <!--end Rightbar-->
+    <!--Start Footer-->
+
+    <footer class="footer text-center text-sm-start d-print-none">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-0 rounded-bottom-0">
+                        <div class="card-body">
+                            <p class="text-muted mb-0">
+                                ©
+                                <script>document.write(new Date().getFullYear())</script>2025
+                                MNB Soft Solution
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--end footer-->
+</div>
+

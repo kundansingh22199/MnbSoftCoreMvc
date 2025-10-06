@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Add Comission";
+}
+
+<div class="page-content">
+    <div class="container-xxl">
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-6 m-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h4 class="card-title">Add Comission</h4>
+                            </div><!--end col-->
+                        </div>  <!--end row-->
+                    </div><!--end card-header-->
+                    <div class="card-body pt-0">
+                        <form method="post" action="/Admin/AddComission">
+                            <div class="mb-2">
+                                <label class="form-label">Select Product</label>
+                                <select class="form-select" id="productSelect" name="productName" required>
+                                    <option value="">-- Select Product --</option>
+                                    <option value="Taskflier">Taskflier</option>
+                                    <option value="Host Guardians">Host Guardians</option>
+                                    <option value="Mparchi">Mparchi</option>
+                                    <option value="MNB Promo">MNB Promo</option>
+                                </select>
+                            </div>
+                            <div class="mb-2" id="">
+                                <label class="form-label">Select Rank</label>
+                                <select id="rankName" class="form-select" name="rankId">
+                                    @if (ViewBag.rankname != null)
+                                    {
+                                        <option value="0">---Select Rank---</option>
+                                        foreach (var rank in ViewBag.rankname)
+                                        {
+                                            <option value="@rank.id">@rank.rankName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Comission(%)</label>
+                                <input type="text" class="form-control numeric-only" maxlength="2" name="comissionPer" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div> <!--end col-->
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        @if (TempData["Success"] != null)
+        {
+                     <text>
+                     Swal.fire({
+                         icon: 'success',
+                         title: 'Success',
+                         text: '@TempData["Success"]'
+                     });
+                     </text>
+        }
+        else if (TempData["Err"] != null)
+        {
+                      <text>
+                      Swal.fire({
+                          icon: 'error',
+                          title: 'Error',
+                          text: '@TempData["Err"]'
+                      });
+                      </text>
+        }
+    });
+</script>
